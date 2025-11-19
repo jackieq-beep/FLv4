@@ -2,243 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Football League 2026</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main Styles -->
   <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- INLINE LANDING PAGE + MOBILE OPTIMIZATION LAYER -->
-  <style>
-  /* ===========================================================
-     PREMIUM LANDING PAGE MOBILE + DESKTOP OPTIMIZATION LAYER
-     Applies ONLY to index.html
-  =========================================================== */
-
-  .hero {
-    padding: 0;
-    background: #060714;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Glow layers */
-  .hero::before,
-  .hero::after {
-    content: "";
-    position: absolute;
-    width: 140%;
-    height: 280px;
-    left: -20%;
-    background: linear-gradient(90deg, rgba(39,229,255,0.23), rgba(255,62,165,0.18));
-    transform: rotate(-6deg);
-    filter: blur(40px);
-    z-index: 1;
-  }
-  .hero::before { top: 15%; }
-  .hero::after {
-    top: 55%;
-    background: linear-gradient(90deg, rgba(113,68,255,0.25), rgba(39,229,255,0.2));
-  }
-
-  .hero-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 120px 32px 80px;
-    position: relative;
-    z-index: 5;
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 40px;
-  }
-
-  .hero-left { padding: 0; }
-
-  .hero-tag {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.14);
-    padding: 5px 12px;
-    font-size: .72rem;
-    border-radius: 999px;
-    margin-bottom: 10px;
-  }
-
-  .hero-title-big {
-    font-family: "Teko", sans-serif;
-    font-size: 4rem;
-    letter-spacing: 0.05em;
-    line-height: .95;
-    margin: 0 0 10px;
-    text-transform: uppercase;
-  }
-
-  .hero-subcontent {
-    color: #cfd3f4;
-    font-size: 1.15rem;
-    line-height: 1.45;
-    max-width: 35rem;
-    margin-bottom: 22px;
-  }
-
-  .hero-features {
-    margin: 16px 0 26px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  .hero-features span {
-    padding: 6px 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.14);
-    color: #b3b6df;
-    font-size: .82rem;
-  }
-
-  .hero-player-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .hero-player-wrap img {
-    max-width: 100%;
-    transform: scale(1.08);
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.55));
-  }
-
-  /* ===========================================================
-     BIGGER AAA SHOWCASE CARDS
-  =========================================================== */
-  .leagues-aaa-module {
-    margin-top: 34px;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .showcase-row {
-    display: flex;
-    gap: 18px;
-    margin-top: 10px;
-  }
-
-  .showcase-big-card {
-    flex: 1;
-    aspect-ratio: 16/9;
-    border-radius: 18px;
-    overflow: hidden;
-
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-
-    transition: transform .25s ease, box-shadow .25s ease;
-  }
-
-  .showcase-big-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .showcase-big-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 38px rgba(0,0,0,0.55);
-  }
-
-  .showcase-caption {
-    margin-top: 12px;
-    color: #c5c9ee;
-    font-size: .95rem;
-  }
-
-  /* ===========================================================
-     MOBILE OPTIMIZATION
-  =========================================================== */
-  @media(max-width: 860px){
-
-    .hero-inner {
-      padding: 100px 20px 60px;
-      grid-template-columns: 1fr;
-      text-align: center;
-      gap: 32px;
-    }
-
-    .hero-player-wrap {
-      order: -1;
-    }
-
-    .hero-player-wrap img {
-      max-width: 78%;
-      margin: 0 auto 10px;
-      transform: scale(1.0);
-    }
-
-    .hero-title-big {
-      font-size: 3.1rem;
-    }
-
-    .hero-subcontent {
-      font-size: 1.05rem;
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero-features { justify-content: center; }
-
-    .store-buttons { justify-content: center; }
-
-    /* Showcase becomes swipe row */
-    .showcase-row {
-      overflow-x: auto;
-      display: flex;
-      gap: 14px;
-      padding-bottom: 6px;
-      scroll-snap-type: x mandatory;
-    }
-
-    .showcase-big-card {
-      min-width: 75%;
-      scroll-snap-align: start;
-    }
-
-    .leagues-aaa-module {
-      flex-direction: column;
-      margin-top: 26px;
-      gap: 20px;
-    }
-
-    .showcase-caption { text-align: center; }
-  }
-
-  @media(max-width: 420px){
-    .hero-title-big {
-      font-size: 2.6rem;
-    }
-    .showcase-big-card {
-      min-width: 82%;
-    }
-  }
-  </style>
-
+  <!-- Scripts -->
   <script defer src="scripts/main.js"></script>
 </head>
 
-
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <div class="nav-inner">
     <a href="index.html" class="brand">
-      <img src="assets/branding/logo_icon.png" class="brand-logo" alt="">
+      <img src="assets/branding/logo_icon.png" alt="Football League 2026" class="brand-logo">
       <div class="brand-text">
         <span class="brand-title">Football League 2026</span>
         <span class="brand-subtitle">Mobile Football</span>
       </div>
     </a>
-
     <nav class="main-nav">
       <a href="downloads.html">Downloads</a>
       <a href="features.html">Features</a>
@@ -246,11 +33,9 @@
       <a href="news.html">News</a>
       <a href="contact.html">Contact</a>
     </nav>
-
     <button class="nav-toggle"><span></span><span></span><span></span></button>
   </div>
 </header>
-
 
 <main>
 
@@ -258,16 +43,17 @@
 <section class="hero">
   <div class="hero-inner">
 
-    <!-- LEFT -->
+    <!-- LEFT SIDE -->
     <div class="hero-left">
       <div class="hero-tag">NEW SEASON</div>
+      <h1>Feels Like Match Day</h1>
 
-      <h1 class="hero-title-big">Feels Like<br>Match Day</h1>
-
-      <p class="hero-subcontent">
-        Build your dream squad, outplay rivals, and experience real match-day intensity in a next-gen mobile football world.
+      <p class="hero-subtitle">
+        Build your dream squad, outplay rivals, and experience match-day intensity 
+        in a next-gen mobile football world.
       </p>
 
+      <!-- Store Buttons -->
       <div class="store-buttons">
         <a class="store-btn gp" href="https://play.google.com/store/apps/details?id=com.football.soccer.league" target="_blank">
           <span class="store-label">GET IT ON</span>
@@ -279,52 +65,78 @@
         </a>
       </div>
 
-      <div class="hero-features">
-        <span>Real Leagues &amp; Clubs*</span>
-        <span>Online & Offline Modes</span>
-        <span>Free to Play</span>
+      <div class="hero-meta">
+        <span>Real leagues &amp; clubs*</span>
+        <span>Online & offline play</span>
+        <span>Free to play</span>
       </div>
 
-      <p style="color:#c7cbee;">
-        Compete in global-inspired leagues with real football drama — title races, knockout nights, rivalries.  
-        New tournaments and themed events drop constantly to keep your career fresh.
-      </p>
+      <!-- Enhanced Real Leagues Section -->
+      <div class="leagues-copy enhanced-leagues">
 
-      <!-- AAA MODULE -->
-      <div class="leagues-aaa-module">
-        <div class="trophy-col">
-          <img src="assets/promo/trophy_duo_render.png" class="trophy-img" alt="">
-        </div>
+        <p>
+          Compete across global-inspired leagues and cups that mirror the drama of real-world football—
+          from title races to knockout nights.
+        </p>
 
-        <div class="showcase-col">
-          <div class="showcase-row">
-            <div class="showcase-big-card">
-              <img src="assets/gameplay/gameplay_action_2.png" alt="">
-            </div>
-            <div class="showcase-big-card">
-              <img src="assets/gameplay/gameplay_action_4.png" alt="">
-            </div>
-            <div class="showcase-big-card">
-              <img src="assets/gameplay/gameplay_action_7.png" alt="">
-            </div>
+        <p>
+          New teams, tournaments, and themed events drop regularly so your career, campaigns, and rivalries
+          always stay fresh.
+        </p>
+
+        <!-- Visual add-on -->
+        <div class="leagues-visual-row">
+          <div class="league-badge">
+            <img src="assets/promo/trophy_duo_render.png" alt="League Trophy">
           </div>
 
-          <p class="showcase-caption">
-            Fresh content every update — new leagues, squads, and seasonal rewards.
-          </p>
+          <div class="league-mini-slides">
+            <img src="assets/gameplay/gameplay_action_2.png" alt="Tournament Action">
+            <img src="assets/gameplay/gameplay_action_4.png" alt="League Match">
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
 
-    <!-- RIGHT -->
-    <div class="hero-player-wrap">
-      <img src="assets/branding/hero_render.png" alt="">
+    <!-- RIGHT SIDE -->
+    <div class="hero-right">
+
+      <!-- Hero Character -->
+      <div class="hero-card hero-player">
+        <img src="assets/branding/hero_render.png" alt="Hero Player">
+      </div>
+
+      <!-- Slideshow -->
+      <div class="hero-card hero-slideshow">
+        <div class="slide active">
+          <img src="assets/gameplay/slideshow_stadiums.webp" alt="Stadiums Under the Lights">
+        </div>
+
+        <div class="slide">
+          <img src="assets/gameplay/slideshow_keeper.webp" alt="Keeper Save">
+        </div>
+
+        <div class="slide">
+          <img src="assets/gameplay/gameplay_action_7.png" alt="Matchday Action">
+        </div>
+
+        <div class="slide">
+          <img src="assets/gameplay/slideshow_hud.webp" alt="Gameplay HUD">
+        </div>
+
+        <div class="slideshow-dots">
+          <button class="dot active" data-index="0"></button>
+          <button class="dot" data-index="1"></button>
+          <button class="dot" data-index="2"></button>
+          <button class="dot" data-index="3"></button>
+        </div>
+
+      </div>
     </div>
 
   </div>
 </section>
-
 
 <!-- HIGHLIGHTS -->
 <section class="section section-highlights">
@@ -333,39 +145,36 @@
     <h2 class="section-title">Next-Gen Mobile Football</h2>
 
     <p class="section-intro">
-      Tactical depth, stylized visuals, and a smarter match engine built for global football fans.
+      A bold blend of realistic football, tactical depth, and stylized visuals built for global players.
     </p>
 
     <div class="highlight-grid">
 
       <article class="highlight-card">
         <h3>Dynamic Match Engine</h3>
-        <p>Smart AI, responsive controls, and fluid animations create authentic match flow.</p>
+        <p>Smart AI, responsive controls, and fluid animations power every match.</p>
       </article>
 
       <article class="highlight-card">
         <h3>Build Your Club</h3>
-        <p>Scout talents, upgrade facilities, and build a squad that fits your identity.</p>
+        <p>Scout talent, upgrade facilities, and craft a team that fits your identity.</p>
       </article>
 
       <article class="highlight-card">
         <h3>Seasonal Events</h3>
-        <p>Limited-time kits, special bosses, and exclusive rewards.</p>
+        <p>Limited-time kits, themed challenges, and special rewards every season.</p>
       </article>
 
     </div>
-
   </div>
 </section>
 
 </main>
 
-
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="assets/branding/logo_icon.png" alt="">
+      <img src="assets/branding/logo_icon.png" alt="Football League 2026">
       <span>Football League 2026</span>
     </div>
 
@@ -383,3 +192,4 @@
 
 </body>
 </html>
+
