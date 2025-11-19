@@ -1,193 +1,266 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Community | Football League 2026</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+/* Community page premium styling for Football League 2026 */
 
-  <!-- Fonts + Base Styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css" />
-  <!-- New community-specific styles -->
-  <link rel="stylesheet" href="styles/community.css" />
+.community-hero {
+  padding: 80px 16px 40px;
+  background:
+    radial-gradient(circle at top left, rgba(39,229,255,0.35), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(255,62,165,0.25), transparent 55%),
+    #151835;
+  text-align: center;
+}
 
-  <script defer src="scripts/main.js"></script>
-</head>
-<body>
-  <!-- SITE HEADER / NAV -->
-  <header class="site-header">
-    <div class="nav-inner">
-      <a href="index.html" class="brand">
-        <img src="assets/branding/logo_icon.png" alt="Football League 2026" class="brand-logo">
-        <div class="brand-text">
-          <span class="brand-title">Football League 2026</span>
-          <span class="brand-subtitle">Mobile Football</span>
-        </div>
-      </a>
-      <nav class="main-nav">
-        <a href="downloads.html">Downloads</a>
-        <a href="features.html">Features</a>
-        <a href="community.html">Community</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+.community-hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
 
-  <main class="page page-community">
-    <!-- HERO: JOIN COMMUNITY -->
-    <section class="community-hero">
-      <div class="community-hero-inner">
-        <h1 class="community-hero-title">Join Our Global Football Community</h1>
-        <p class="community-hero-sub">Highlights. Rivals. Live chats. All in one place.</p>
+.community-hero-title {
+  font-family: 'Teko', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 
-        <div class="community-live-row">
-          <div class="live-pill">
-            <span class="live-dot"></span>
-            <span class="live-label">Discord live now</span>
-            <span class="live-count">2,314 online</span>
-          </div>
-          <a href="https://discord.gg/m825ft9xGn" target="_blank" class="live-cta">Join the server</a>
-        </div>
-      </div>
-    </section>
+.community-hero-sub {
+  margin-top: 6px;
+  color: #c2c5f0;
+  font-size: 1.05rem;
+}
 
-    <!-- PRO CARDS: DISCORD / FACEBOOK / INSTAGRAM -->
-    <section class="community-pro">
-      <div class="community-pro-inner">
-        <div class="community-pro-grid">
+.community-live-row {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
 
-          <!-- Discord Vanity Card -->
-          <a href="https://discord.gg/m825ft9xGn" target="_blank" class="community-pro-card discord-card">
-            <div class="community-pro-icon">
-              <!-- Ultra-clean Discord SVG icon -->
-              <svg viewBox="0 0 32 32" aria-hidden="true" class="icon-svg">
-                <circle cx="16" cy="16" r="15" class="icon-ring" />
-                <path class="icon-fill" d="M21.4 11.2a9.7 9.7 0 0 0-2.4-.8l-.2.3a8.1 8.1 0 0 1 2 .7 8.4 8.4 0 0 0-6.8-1.1 8.7 8.7 0 0 0-2 .9 6.5 6.5 0 0 1 .3-.6 9.3 9.3 0 0 0-2.6.9c-1.7 2.5-2.5 4.9-2.2 7.2a9.9 9.9 0 0 0 3.1 1.5 7.5 7.5 0 0 0 .7-1.1 6.2 6.2 0 0 1-1-.5l.3-.2a6.9 6.9 0 0 0 6.5 0l.3.2a6.2 6.2 0 0 1-1 .5l.7 1.1a9.8 9.8 0 0 0 3.1-1.5c.3-3-.5-5.4-2.4-7.6ZM13.7 16.9c-.7 0-1.3-.5-1.3-1.1s.5-1.1 1.3-1.1 1.3.5 1.3 1.1-.6 1.1-1.3 1.1Zm4.7 0c-.7 0-1.3-.5-1.3-1.1s.5-1.1 1.3-1.1 1.3.5 1.3 1.1-.6 1.1-1.3 1.1Z" />
-              </svg>
-            </div>
-            <div class="community-pro-content">
-              <h2>Discord</h2>
-              <p>Matchmaking, dev Q&A, player tips, and live tactics talk.</p>
-              <span class="vanity">discord.gg/m825ft9xGn</span>
-            </div>
-          </a>
+.live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(9, 13, 36, 0.9);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 0 18px rgba(39,229,255,0.4);
+  font-size: 0.8rem;
+}
 
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/playfootballleague/" target="_blank" class="community-pro-card">
-            <div class="community-pro-icon">
-              <!-- Ultra-clean Facebook SVG icon -->
-              <svg viewBox="0 0 32 32" aria-hidden="true" class="icon-svg">
-                <circle cx="16" cy="16" r="15" class="icon-ring" />
-                <path class="icon-fill" d="M18.2 10.4H20V8h-1.9c-3 0-4.9 1.8-4.9 4.7v1.8h-2v2.5h2V24h2.9v-6.9h2.3l.4-2.5h-2.7v-1.6c0-1.1.5-1.6 1.1-1.6Z" />
-              </svg>
-            </div>
-            <div class="community-pro-content">
-              <h2>Facebook</h2>
-              <p>Big announcements, trailers, and patch notes in one feed.</p>
-            </div>
-          </a>
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #32ff8a;
+  box-shadow: 0 0 12px rgba(50,255,138,0.9);
+}
 
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/fl2024official/" target="_blank" class="community-pro-card">
-            <div class="community-pro-icon">
-              <!-- Ultra-clean Instagram SVG icon -->
-              <svg viewBox="0 0 32 32" aria-hidden="true" class="icon-svg">
-                <circle cx="16" cy="16" r="15" class="icon-ring" />
-                <path class="icon-fill" d="M20.4 10h-8.8A1.6 1.6 0 0 0 10 11.6v8.8A1.6 1.6 0 0 0 11.6 22h8.8A1.6 1.6 0 0 0 22 20.4v-8.8A1.6 1.6 0 0 0 20.4 10Zm-4.4 8.6a2.6 2.6 0 1 1 2.6-2.6 2.6 2.6 0 0 1-2.6 2.6Zm3.1-5.9a.9.9 0 1 1 .9-.9.9.9 0 0 1-.9.9Z" />
-              </svg>
-            </div>
-            <div class="community-pro-content">
-              <h2>Instagram</h2>
-              <p>Goal montages, kit drops, and behind-the-scenes art.</p>
-            </div>
-          </a>
+.live-label {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #e9fff7;
+}
 
-        </div>
-      </div>
-    </section>
+.live-count {
+  color: #c7ffdf;
+  font-weight: 600;
+}
 
-    <!-- PREVIEWS + SOCIAL STRIPS -->
-    <section class="community-preview">
-      <div class="community-preview-inner">
-        <h2 class="section-title">What You’ll Find Inside</h2>
+.live-cta {
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: linear-gradient(135deg, #27e5ff, #7b5cff);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #040613;
+}
 
-        <div class="community-preview-grid">
-          <div class="preview-card">
-            <h3>Match Highlights</h3>
-            <img src="assets/gameplay/gameplay_action_3.png" alt="Highlight preview" />
-          </div>
-          <div class="preview-card">
-            <h3>Team Builds</h3>
-            <img src="assets/ui/ui_screen_3.png" alt="Team build preview" />
-          </div>
-          <div class="preview-card">
-            <h3>Exclusive Events</h3>
-            <img src="assets/gameplay/gameplay_action_5.png" alt="Event preview" />
-          </div>
-        </div>
+/* Pro cards */
 
-        <!-- Instagram thumbnail strip (auto-feed ready) -->
-        <div class="insta-strip">
-          <div class="insta-strip-header">
-            <span class="insta-handle">@fl2024official</span>
-            <span class="insta-label">Latest posts</span>
-          </div>
-          <div class="insta-strip-row" id="insta-strip">
-            <!-- For a real auto-feed, you can replace these with a widget or injected thumbnails -->
-            <a class="insta-thumb" href="https://www.instagram.com/fl2024official/" target="_blank" aria-label="Instagram post 1"></a>
-            <a class="insta-thumb" href="https://www.instagram.com/fl2024official/" target="_blank" aria-label="Instagram post 2"></a>
-            <a class="insta-thumb" href="https://www.instagram.com/fl2024official/" target="_blank" aria-label="Instagram post 3"></a>
-          </div>
-        </div>
+.community-pro {
+  padding: 32px 16px 24px;
+  background: #090b1b;
+}
 
-        <!-- Facebook feed preview (official Page Plugin) -->
-        <div class="fb-preview-card">
-          <h3>Facebook Feed</h3>
-          <div id="fb-root"></div>
-          <div class="fb-page"
-               data-href="https://www.facebook.com/playfootballleague/"
-               data-tabs="timeline"
-               data-width="380"
-               data-height="280"
-               data-small-header="false"
-               data-adapt-container-width="true"
-               data-hide-cover="false"
-               data-show-facepile="false">
-            <blockquote cite="https://www.facebook.com/playfootballleague/" class="fb-xfbml-parse-ignore">
-              <a href="https://www.facebook.com/playfootballleague/">Football League</a>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+.community-pro-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="assets/branding/logo_icon.png" alt="Football League 2026">
-        <span>Football League 2026</span>
-      </div>
-      <div class="footer-links">
-        <a href="downloads.html">Downloads</a>
-        <a href="features.html">Features</a>
-        <a href="community.html">Community</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <p class="footer-meta">*Licenses and content may vary by region.</p>
-    </div>
-  </footer>
+.community-pro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
 
-  <!-- Facebook SDK for the feed preview -->
-  <script async defer crossorigin="anonymous"
-          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"
-          nonce="fl2026"></script>
-</body>
-</html>
+.community-pro-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #10142a;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.25s ease;
+}
 
+.community-pro-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.18);
+  background: #161b3b;
+}
+
+.community-pro-icon {
+  flex: 0 0 auto;
+}
+
+.icon-svg {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-ring {
+  fill: none;
+  stroke: rgba(255,255,255,0.4);
+  stroke-width: 1.4;
+}
+
+.icon-fill {
+  fill: #f9fbff;
+}
+
+.discord-card {
+  background: radial-gradient(circle at top left, rgba(123,92,255,0.28), rgba(10,12,32,0.98));
+  border-color: rgba(120,140,255,0.4);
+}
+
+.discord-card .icon-fill {
+  fill: #c7d0ff;
+}
+
+.community-pro-content h2 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+}
+
+.community-pro-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #b7bbdf;
+}
+
+.vanity {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: #9aa0ff;
+}
+
+/* Previews + social strips */
+
+.community-preview {
+  padding: 32px 16px 70px;
+  background:
+    radial-gradient(circle at top right, rgba(39,229,255,0.2), transparent 55%),
+    #070816;
+}
+
+.community-preview-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.community-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.preview-card {
+  background: #101226;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+
+.preview-card h3 {
+  margin: 0 0 6px;
+  font-size: 0.98rem;
+}
+
+.preview-card img {
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+/* Instagram strip */
+
+.insta-strip {
+  margin-top: 26px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, rgba(255,62,165,0.18), rgba(39,229,255,0.14));
+}
+
+.insta-strip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.insta-handle {
+  font-weight: 600;
+}
+
+.insta-label {
+  color: #e8ebff;
+  opacity: 0.8;
+}
+
+.insta-strip-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.insta-thumb {
+  flex: 0 0 80px;
+  height: 80px;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.25), transparent 55%),
+    rgba(5,7,22,0.9);
+}
+
+/* Facebook preview */
+
+.fb-preview-card {
+  margin-top: 26px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: #0e1124;
+}
+
+.fb-preview-card h3 {
+  margin: 0 0 8px;
+  font-size: 0.98rem;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 720px) {
+  .community-hero {
+    padding-top: 70px;
+  }
+  .community-live-row {
+    flex-direction: column;
+  }
+}
