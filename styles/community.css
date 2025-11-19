@@ -1,0 +1,266 @@
+/* Community page premium styling for Football League 2026 */
+
+.community-hero {
+  padding: 80px 16px 40px;
+  background:
+    radial-gradient(circle at top left, rgba(39,229,255,0.35), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(255,62,165,0.25), transparent 55%),
+    #151835;
+  text-align: center;
+}
+
+.community-hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.community-hero-title {
+  font-family: 'Teko', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.community-hero-sub {
+  margin-top: 6px;
+  color: #c2c5f0;
+  font-size: 1.05rem;
+}
+
+.community-live-row {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
+.live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(9, 13, 36, 0.9);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 0 18px rgba(39,229,255,0.4);
+  font-size: 0.8rem;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #32ff8a;
+  box-shadow: 0 0 12px rgba(50,255,138,0.9);
+}
+
+.live-label {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #e9fff7;
+}
+
+.live-count {
+  color: #c7ffdf;
+  font-weight: 600;
+}
+
+.live-cta {
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.22);
+  background: linear-gradient(135deg, #27e5ff, #7b5cff);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #040613;
+}
+
+/* Pro cards */
+
+.community-pro {
+  padding: 32px 16px 24px;
+  background: #090b1b;
+}
+
+.community-pro-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.community-pro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.community-pro-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #10142a;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.25s ease;
+}
+
+.community-pro-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.18);
+  background: #161b3b;
+}
+
+.community-pro-icon {
+  flex: 0 0 auto;
+}
+
+.icon-svg {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-ring {
+  fill: none;
+  stroke: rgba(255,255,255,0.4);
+  stroke-width: 1.4;
+}
+
+.icon-fill {
+  fill: #f9fbff;
+}
+
+.discord-card {
+  background: radial-gradient(circle at top left, rgba(123,92,255,0.28), rgba(10,12,32,0.98));
+  border-color: rgba(120,140,255,0.4);
+}
+
+.discord-card .icon-fill {
+  fill: #c7d0ff;
+}
+
+.community-pro-content h2 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+}
+
+.community-pro-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #b7bbdf;
+}
+
+.vanity {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: #9aa0ff;
+}
+
+/* Previews + social strips */
+
+.community-preview {
+  padding: 32px 16px 70px;
+  background:
+    radial-gradient(circle at top right, rgba(39,229,255,0.2), transparent 55%),
+    #070816;
+}
+
+.community-preview-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.community-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.preview-card {
+  background: #101226;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+
+.preview-card h3 {
+  margin: 0 0 6px;
+  font-size: 0.98rem;
+}
+
+.preview-card img {
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+/* Instagram strip */
+
+.insta-strip {
+  margin-top: 26px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, rgba(255,62,165,0.18), rgba(39,229,255,0.14));
+}
+
+.insta-strip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.insta-handle {
+  font-weight: 600;
+}
+
+.insta-label {
+  color: #e8ebff;
+  opacity: 0.8;
+}
+
+.insta-strip-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.insta-thumb {
+  flex: 0 0 80px;
+  height: 80px;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.25), transparent 55%),
+    rgba(5,7,22,0.9);
+}
+
+/* Facebook preview */
+
+.fb-preview-card {
+  margin-top: 26px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: #0e1124;
+}
+
+.fb-preview-card h3 {
+  margin: 0 0 8px;
+  font-size: 0.98rem;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 720px) {
+  .community-hero {
+    padding-top: 70px;
+  }
+  .community-live-row {
+    flex-direction: column;
+  }
+}
