@@ -11,6 +11,67 @@
   <!-- Main Styles -->
   <link rel="stylesheet" href="styles/style.css" />
 
+  <!-- INLINE LANDING PAGE IMPROVEMENTS -->
+  <style>
+    /* --- Latest Announcements --- */
+    .latest-announcements {
+      margin: 24px 0 10px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+
+    .ann-title {
+      font-family: "Teko", sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: .05em;
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .ann-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ann-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .ann-tag {
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      border-radius: 999px;
+      color: #080915;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .ann-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    @media (max-width: 720px) {
+      .latest-announcements {
+        padding: 16px;
+      }
+      .ann-text {
+        font-size: .9rem;
+      }
+    }
+  </style>
+
   <!-- Scripts -->
   <script defer src="scripts/main.js"></script>
 </head>
@@ -71,7 +132,7 @@
         <span>Free to play</span>
       </div>
 
-      <!-- Enhanced Real Leagues Section -->
+      <!-- Leagues Text -->
       <div class="leagues-copy enhanced-leagues">
 
         <p>
@@ -84,15 +145,33 @@
           always stay fresh.
         </p>
 
-        <!-- Visual add-on -->
-        <div class="leagues-visual-row">
-          <div class="league-badge">
-            <img src="assets/promo/trophy_duo_render.png" alt="League Trophy">
-          </div>
+        <!-- LATEST ANNOUNCEMENTS -->
+        <div class="latest-announcements">
+          <h3 class="ann-title">Latest Announcements</h3>
 
-          <div class="league-mini-slides">
-            <img src="assets/gameplay/gameplay_action_2.png" alt="Tournament Action">
-            <img src="assets/gameplay/gameplay_action_4.png" alt="League Match">
+          <div class="ann-list">
+
+            <div class="ann-item">
+              <div class="ann-tag">Update</div>
+              <div class="ann-text">
+                New Season Kickoff! Fresh squads, revamped AI, and upgraded stadium atmospheres.
+              </div>
+            </div>
+
+            <div class="ann-item">
+              <div class="ann-tag">Event</div>
+              <div class="ann-text">
+                Golden Era Puzzle: Spain — collect pieces, stay flawless, and win bonus rewards.
+              </div>
+            </div>
+
+            <div class="ann-item">
+              <div class="ann-tag">Feature</div>
+              <div class="ann-text">
+                Build Your Club 2.0 — improved training, new upgrades, and deeper team chemistry.
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -192,4 +271,3 @@
 
 </body>
 </html>
-
