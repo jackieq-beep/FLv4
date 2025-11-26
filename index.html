@@ -13,9 +13,11 @@
   <!-- Main Styles -->
   <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- INLINE LANDING PAGE IMPROVEMENTS -->
+  <!-- INLINE IMPROVEMENTS -->
   <style>
-    /* --- Latest Announcements --- */
+    /* ------------------------------------------- */
+    /* LATEST ANNOUNCEMENTS                        */
+    /* ------------------------------------------- */
     .latest-announcements {
       margin: 24px 0 10px;
       padding: 18px 20px;
@@ -73,42 +75,31 @@
       }
     }
 
-    /* ----------------------------------------------------- */
-    /* HERO CARDS / SLIDESHOWS – FIXED ASPECT RATIO FOR iOS  */
-    /* ----------------------------------------------------- */
+    /* ------------------------------------------- */
+    /* HERO LAYOUT FIX – NO GAPS, AUTO HEIGHT      */
+    /* ------------------------------------------- */
 
-    /* Base hero cards (right side) */
+    /* Key fix: prevent right column gap */
+    .hero-inner {
+      display: flex;
+      align-items: flex-start !important;
+    }
+
+    /* Base hero cards */
     .hero-card {
       position: relative;
       overflow: hidden;
       border-radius: 18px;
     }
 
-    /* Player portrait card – more vertical */
-    .hero-card.hero-player {
-      aspect-ratio: 3 / 4; /* tweak if you want more/less height */
-    }
-
-    /* Gameplay slideshow card – more horizontal */
-    .hero-card.hero-slideshow {
-      aspect-ratio: 16 / 9;
-    }
-
-    /* Ensure images always fill their cards */
-    .hero-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* ----------------------------------------------------- */
-    /* PLAYER IMAGE 2-IMAGE SLIDESHOW (TOP-RIGHT IMAGE AREA) */
-    /* ----------------------------------------------------- */
+    /* ----------------------------- */
+    /* PLAYER SLIDESHOW (TOP RIGHT)  */
+    /* ----------------------------- */
     .hero-player-slideshow {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: auto; /* auto so it grows naturally */
+      overflow: hidden;
     }
 
     .hero-player-slideshow .player-slide {
@@ -117,8 +108,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: inherit;
       opacity: 0;
+      border-radius: inherit;
       transition: opacity 1.2s ease-in-out;
     }
 
@@ -126,24 +117,39 @@
       opacity: 1;
     }
 
-    /* ----------------------------------------------------- */
-    /* GAMEPLAY SLIDESHOW IMAGES (BOTTOM HERO CARD)          */
-    /* ----------------------------------------------------- */
+    /* ----------------------------- */
+    /* GAMEPLAY SLIDESHOW (BOTTOM)   */
+    /* ----------------------------- */
+
+    /* Auto-height container (fixes gap) */
+    .hero-card.hero-slideshow {
+      position: relative;
+      width: 100%;
+      height: auto; /* ⭐ key fix */
+      overflow: hidden;
+    }
+
+    /* Slides are no longer absolute – allows container height to follow image height */
     .hero-slideshow .slide {
-      position: absolute;
-      inset: 0;
+      width: 100%;
+      height: auto;
       opacity: 0;
       transition: opacity 0.8s ease-in-out;
+      position: absolute;
+      inset: 0;
     }
 
     .hero-slideshow .slide.active {
       opacity: 1;
     }
 
-    /* Make sure hero-slideshow is a positioned container */
-    .hero-card.hero-slideshow {
-      position: relative;
+    .hero-slideshow img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
     }
+
   </style>
 
   <!-- Scripts -->
@@ -208,9 +214,7 @@
           <span>Free to play</span>
         </div>
 
-        <!-- Leagues Text -->
         <div class="leagues-copy enhanced-leagues">
-
           <p>
             Compete across global-inspired Leagues and Cups that mirror the drama of real-world football,
             from title races to knockout nights.
@@ -230,7 +234,7 @@
               <div class="ann-item">
                 <div class="ann-tag">Official</div>
                 <div class="ann-text">
-                  Official Manchester City kits and AS Monaco licenses have arrived in Football League 2026. Authentic looks. Elite football. Play the season in true club colors.
+                  Official Manchester City kits and AS Monaco licenses have arrived in Football League 2026. Authentic looks. Elite football.
                 </div>
               </div>
 
@@ -257,35 +261,35 @@
       <!-- RIGHT SIDE -->
       <div class="hero-right">
 
-        <!-- Player slideshow (top-right) -->
+        <!-- PLAYER SLIDESHOW -->
         <div class="hero-card hero-player hero-player-slideshow">
-          <img class="player-slide active" src="assets/branding/manchestercity.JPG" alt="Manchester City player in Football League 2026">
-          <img class="player-slide" src="assets/promo/Football_League_AC_Monaco.jpg" alt="AS Monaco player in Football League 2026">
+          <img class="player-slide active" src="assets/branding/manchestercity.JPG" alt="Manchester City uniform in Football League 2026">
+          <img class="player-slide" src="assets/promo/Football_League_AC_Monaco.jpg" alt="AS Monaco uniform in Football League 2026">
         </div>
 
-        <!-- Gameplay slideshow (bottom-right) -->
+        <!-- GAMEPLAY SLIDESHOW (AUTO HEIGHT – FIXED) -->
         <div class="hero-card hero-slideshow">
           <div class="slide active">
             <img src="assets/features/football-league-2026-midfield-attack.webp" alt="Midfield attack in Football League 2026">
           </div>
 
           <div class="slide">
-            <img src="assets/gameplay/slideshow_gameply_action_field.jpg" alt="Football League 2026 stadium gameplay">
+            <img src="assets/gameplay/slideshow_gameply_action_field.jpg" alt="Football League 2026 gameplay">
           </div>
 
           <div class="slide">
-            <img src="assets/gameplay/gameplay_action_7.jpg" alt="Matchday action in Football League 2026">
+            <img src="assets/gameplay/gameplay_action_7.jpg" alt="Matchday play in Football League 2026">
           </div>
 
           <div class="slide">
-            <img src="assets/features/football-league-2026-goal-attempt.webp" alt="Goal attempt in Football League 2026">
+            <img src="assets/features/football-league-2026-goal-attempt.webp" alt="Goal attempt scene">
           </div>
 
           <div class="slideshow-dots">
-            <button class="dot active" data-index="0" aria-label="Show slide 1"></button>
-            <button class="dot" data-index="1" aria-label="Show slide 2"></button>
-            <button class="dot" data-index="2" aria-label="Show slide 3"></button>
-            <button class="dot" data-index="3" aria-label="Show slide 4"></button>
+            <button class="dot active" data-index="0"></button>
+            <button class="dot" data-index="1"></button>
+            <button class="dot" data-index="2"></button>
+            <button class="dot" data-index="3"></button>
           </div>
 
         </div>
@@ -318,7 +322,7 @@
 
         <article class="highlight-card">
           <h3>Live Events</h3>
-          <p>Fresh challenges arrive regularly, earn coins, unlock special rewards, and boost your team with exclusive event items.</p>
+          <p>Fresh challenges arrive regularly — earn coins, unlock special rewards, and boost your team with exclusive items.</p>
         </article>
 
       </div>
@@ -330,16 +334,15 @@
 <!-- Footer include placeholder -->
 <footer class="site-footer" id="footer-include"></footer>
 
-<!-- Footer include loader + player slideshow script -->
+<!-- Scripts -->
 <script>
-  // Load shared footer include
+  // Load footer include
   (async function loadFooter() {
     const footer = document.getElementById("footer-include");
     if (!footer) return;
 
     try {
       const response = await fetch("includes/footer.html");
-      if (!response.ok) throw new Error("Network response was not ok");
       const html = await response.text();
       footer.innerHTML = html;
     } catch (e) {
@@ -347,7 +350,7 @@
     }
   })();
 
-  // Simple 2-image player slideshow (top-right hero card)
+  // Player slideshow
   document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".hero-player-slideshow .player-slide");
     if (!slides.length) return;
@@ -355,7 +358,7 @@
     let index = 0;
     slides[0].classList.add("active");
 
-    setInterval(function () {
+    setInterval(() => {
       slides[index].classList.remove("active");
       index = (index + 1) % slides.length;
       slides[index].classList.add("active");
@@ -365,4 +368,3 @@
 
 </body>
 </html>
-
