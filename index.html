@@ -13,7 +13,7 @@
   <!-- Main Styles -->
   <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- INLINE FIXES FOR HERO LAYOUT -->
+  <!-- INLINE OPTIMIZED HERO FIXES -->
   <style>
     /* ------------------------------------------------------ */
     /* ANNOUNCEMENTS                                            */
@@ -73,38 +73,41 @@
     }
 
     /* ------------------------------------------------------ */
-    /* HERO LAYOUT FIX — NO GAPS + FULL SIZE IMAGES           */
+    /* HERO LAYOUT: FIXES + OPTIMIZATION                       */
     /* ------------------------------------------------------ */
 
-    /* Key fix: prevent columns from stretching and breaking */
+    /* Columns should not force equal height */
     .hero-inner {
       display: flex;
       align-items: flex-start !important;
       gap: 32px;
     }
 
-    /* ⭐ CRITICAL FIX: the right column must not collapse */
+    /* Prevent collapsing - give right column proper width + height */
     .hero-right {
       flex: 1 1 420px;
       min-width: 420px;
+      min-height: 800px; /* Total column height for both images */
     }
 
+    /* Stack on mobile */
     @media (max-width: 900px) {
       .hero-inner {
         flex-direction: column;
       }
       .hero-right {
         min-width: 100%;
+        min-height: auto;
       }
     }
 
     /* ------------------------------------------------------ */
-    /* PLAYER SLIDESHOW (TOP RIGHT)                           */
+    /* PLAYER SLIDESHOW (TOP)                                  */
     /* ------------------------------------------------------ */
     .hero-player-slideshow {
       position: relative;
       width: 100%;
-      height: auto;
+      min-height: 420px; /* ⭐ Perfect player image height */
       overflow: hidden;
       border-radius: 18px;
     }
@@ -124,22 +127,22 @@
     }
 
     /* ------------------------------------------------------ */
-    /* GAMEPLAY SLIDESHOW (AUTO HEIGHT — FIXED)               */
+    /* GAMEPLAY SLIDESHOW (BOTTOM)                             */
     /* ------------------------------------------------------ */
     .hero-card.hero-slideshow {
       position: relative;
       width: 100%;
-      height: auto;
+      min-height: 340px; /* ⭐ Best size for desktop+mobile */
       overflow: hidden;
-      border-radius: 18px;
       margin-top: 18px;
+      border-radius: 18px;
     }
 
     .hero-slideshow .slide {
       opacity: 0;
-      transition: opacity 0.8s ease-in-out;
       position: absolute;
       inset: 0;
+      transition: opacity 0.8s ease-in-out;
     }
 
     .hero-slideshow .slide.active {
@@ -148,14 +151,12 @@
 
     .hero-slideshow img {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
       display: block;
     }
-
   </style>
 
-  <!-- Scripts -->
   <script defer src="scripts/main.js"></script>
 
 </head>
@@ -228,7 +229,7 @@
             always stay fresh.
           </p>
 
-          <!-- LATEST ANNOUNCEMENTS -->
+          <!-- ANNOUNCEMENTS -->
           <div class="latest-announcements">
             <h3 class="ann-title">Latest Announcements</h3>
 
@@ -244,7 +245,7 @@
               <div class="ann-item">
                 <div class="ann-tag">Event</div>
                 <div class="ann-text">
-                  Road to Champion Challenge 4.0 has arrived. Relive the 2018 Championship journey of the French Team.
+                  Road to Champion Challenge 4.0 has arrived.
                 </div>
               </div>
 
@@ -273,11 +274,11 @@
         <!-- GAMEPLAY SLIDESHOW -->
         <div class="hero-card hero-slideshow">
           <div class="slide active">
-            <img src="assets/features/football-league-2026-midfield-attack.webp" alt="Midfield Attack Screenshot">
+            <img src="assets/features/football-league-2026-midfield-attack.webp" alt="Midfield Attack">
           </div>
 
           <div class="slide">
-            <img src="assets/gameplay/slideshow_gameply_action_field.jpg" alt="Gameplay Field Screenshot">
+            <img src="assets/gameplay/slideshow_gameply_action_field.jpg" alt="Field Gameplay">
           </div>
 
           <div class="slide">
@@ -338,11 +339,11 @@
 <script>
   // Load footer include
   (async function() {
-    const footer = document.getElementById("footer-include");
-    if (!footer) return;
+    const f = document.getElementById("footer-include");
+    if (!f) return;
     try {
       const res = await fetch("includes/footer.html");
-      footer.innerHTML = await res.text();
+      f.innerHTML = await res.text();
     } catch (e) {
       console.error("Footer load failed:", e);
     }
@@ -364,5 +365,4 @@
 
 </body>
 </html>
-
 
