@@ -13,8 +13,141 @@
   <!-- Main Styles -->
   <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- INLINE LANDING PAGE IMPROVEMENTS -->
+  <!-- INLINE LAYOUT & HERO SLIDESHOW -->
   <style>
+    /* Make hero content stack top → down instead of left/right */
+    .hero-inner {
+      display: block; /* override any flex row from style.css */
+    }
+
+    /* ================================
+       FULL-WIDTH HERO SLIDESHOW (TOP)
+       ================================ */
+    .hero-slideshow-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 32px auto;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .hero-slideshow {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;       /* cinematic hero */
+      max-height: 680px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .hero-slideshow-wrapper {
+        border-radius: 0;
+        margin-bottom: 24px;
+      }
+      .hero-slideshow {
+        aspect-ratio: 16 / 9;
+        max-height: none;
+      }
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.9s ease-in-out;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .hero-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform-origin: center;
+      transform: scale(1.02);
+    }
+
+    /* Premium Ken Burns-style zoom for active slide */
+    .hero-slide.active img {
+      animation: hero-kenburns 8s ease-in-out forwards;
+    }
+
+    @keyframes hero-kenburns {
+      0% {
+        transform: scale(1.02);
+      }
+      100% {
+        transform: scale(1.12);
+      }
+    }
+
+    /* Dots navigation */
+    .hero-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 2;
+    }
+
+    .hero-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.7);
+      background: rgba(0,0,0,0.4);
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .hero-dot.active {
+      background: #ffffff;
+      border-color: #ffffff;
+    }
+
+    /* Optional arrows (subtle) */
+    .hero-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.6);
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 2;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .hero-nav.hero-prev {
+      left: 16px;
+    }
+
+    .hero-nav.hero-next {
+      right: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-nav {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+    }
+
     /* --- Latest Announcements --- */
     .latest-announcements {
       margin: 24px 0 10px;
@@ -72,76 +205,6 @@
         font-size: .9rem;
       }
     }
-
-    /* ----------------------------------------------------- */
-    /* HERO IMAGE SIZES – SHORTER + BALANCED                 */
-    /* ----------------------------------------------------- */
-
-    /* PLAYER SLIDESHOW (TOP IMAGE) */
-    .hero-player-slideshow {
-      position: relative;
-      width: 100%;
-      min-height: 300px;      /* SHORTER: fixes tall layout */
-      overflow: hidden;
-      border-radius: 18px;
-    }
-
-    @media (max-width: 900px) {
-      .hero-player-slideshow {
-        min-height: 380px;    /* Better mobile height */
-      }
-    }
-
-    /* GAMEPLAY SLIDESHOW (BOTTOM IMAGE) */
-    .hero-card.hero-slideshow {
-      position: relative;
-      width: 100%;
-      min-height: 260px;      /* SHORTER: aligns with left column */
-      overflow: hidden;
-      margin-top: 18px;
-      border-radius: 18px;
-    }
-
-    @media (max-width: 900px) {
-      .hero-card.hero-slideshow {
-        min-height: 320px;
-      }
-    }
-
-    /* Shared image rules */
-    .hero-card img,
-    .hero-player-slideshow img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* PLAYER SLIDESHOW FADE */
-    .player-slide {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1.2s ease-in-out;
-    }
-    .player-slide.active {
-      opacity: 1;
-    }
-
-    /* GAMEPLAY SLIDESHOW FADE */
-    .hero-slideshow .slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.8s ease-in-out;
-    }
-    .hero-slideshow .slide.active {
-      opacity: 1;
-    }
-
   </style>
 
   <!-- Scripts -->
@@ -175,17 +238,70 @@
 
 <main>
 
-  <!-- HERO -->
+  <!-- ========================= -->
+  <!-- TOP FULL-WIDTH HERO AREA -->
+  <!-- ========================= -->
   <section class="hero">
+    <div class="hero-slideshow-wrapper">
+      <div class="hero-slideshow" id="heroSlideshow">
+
+        <!-- 1) Man City (first) -->
+        <div class="hero-slide active">
+          <img src="assets/branding/manchestercity.JPG" alt="Manchester City licensed kits in Football League 2026">
+        </div>
+
+        <!-- 2) AS Monaco -->
+        <div class="hero-slide">
+          <img src="assets/promo/Football_League_AC_Monaco.jpg" alt="AS Monaco licensed kits in Football League 2026">
+        </div>
+
+        <!-- 3) Gameplay: midfield attack -->
+        <div class="hero-slide">
+          <img src="assets/features/football-league-2026-midfield-attack.webp" alt="Midfield attack gameplay in Football League 2026">
+        </div>
+
+        <!-- 4) Gameplay: stadium view -->
+        <div class="hero-slide">
+          <img src="assets/gameplay/slideshow_gameply_action_field.jpg" alt="Stadium gameplay moment in Football League 2026">
+        </div>
+
+        <!-- 5) Gameplay: action close-up -->
+        <div class="hero-slide">
+          <img src="assets/gameplay/gameplay_action_7.jpg" alt="Matchday action close-up in Football League 2026">
+        </div>
+
+        <!-- 6) Gameplay: goal attempt -->
+        <div class="hero-slide">
+          <img src="assets/features/football-league-2026-goal-attempt.webp" alt="Goal attempt scene in Football League 2026">
+        </div>
+
+      </div>
+
+      <!-- Hero controls -->
+      <button class="hero-nav hero-prev" type="button" aria-label="Previous slide">&#10094;</button>
+      <button class="hero-nav hero-next" type="button" aria-label="Next slide">&#10095;</button>
+
+      <div class="hero-dots" id="heroDots">
+        <button class="hero-dot active" data-index="0" aria-label="Show slide 1"></button>
+        <button class="hero-dot" data-index="1" aria-label="Show slide 2"></button>
+        <button class="hero-dot" data-index="2" aria-label="Show slide 3"></button>
+        <button class="hero-dot" data-index="3" aria-label="Show slide 4"></button>
+        <button class="hero-dot" data-index="4" aria-label="Show slide 5"></button>
+        <button class="hero-dot" data-index="5" aria-label="Show slide 6"></button>
+      </div>
+    </div>
+
+    <!-- ==================== -->
+    <!-- HERO CONTENT (UNDER) -->
+    <!-- ==================== -->
     <div class="hero-inner">
 
-      <!-- LEFT SIDE -->
       <div class="hero-left">
         <div class="hero-tag">NEW SEASON</div>
         <h1>Feels Like Match Day</h1>
 
         <p class="hero-subtitle">
-          Create your ultimate squad, take on global rivals, and dive into the full match-day rush that defines Football League 2026
+          Create your ultimate squad, take on global rivals, and dive into the full match-day rush that defines Football League 2026.
         </p>
 
         <!-- Store Buttons -->
@@ -201,71 +317,55 @@
         </div>
 
         <div class="hero-meta">
-          <span>Real Leagues & Clubs*</span>
-          <span>Online & offline play</span>
+          <span>Real Leagues &amp; Clubs*</span>
+          <span>Online &amp; offline play</span>
           <span>Free to play</span>
         </div>
 
-        <!-- LATEST ANNOUNCEMENTS -->
-        <div class="latest-announcements">
-          <h3 class="ann-title">Latest Announcements</h3>
+        <div class="leagues-copy enhanced-leagues">
+          <p>
+            Compete across global-inspired Leagues and Cups that mirror the drama of real-world football,
+            from title races to knockout nights.
+          </p>
 
-          <div class="ann-list">
+          <p>
+            New teams, tournaments, and themed events drop regularly so your career, campaigns, and rivalries
+            always stay fresh.
+          </p>
 
-            <div class="ann-item">
-              <div class="ann-tag">Official</div>
-              <div class="ann-text">
-                Official Manchester City kits and AS Monaco licenses have arrived in Football League 2026. Authentic looks. Elite football.
+          <!-- LATEST ANNOUNCEMENTS -->
+          <div class="latest-announcements">
+            <h3 class="ann-title">Latest Announcements</h3>
+
+            <div class="ann-list">
+
+              <div class="ann-item">
+                <div class="ann-tag">Official</div>
+                <div class="ann-text">
+                  Official Manchester City kits and AS Monaco licenses have arrived in Football League 2026. Authentic looks. Elite football. Play the season in true club colors.
+                </div>
               </div>
-            </div>
 
-            <div class="ann-item">
-              <div class="ann-tag">Event</div>
-              <div class="ann-text">
-                Road to Champion Challenge 4.0 has arrived. Relive the 2018 Championship journey of the French Team and claim exclusive rewards.
+              <div class="ann-item">
+                <div class="ann-tag">Event</div>
+                <div class="ann-text">
+                  Road to Champion Challenge 4.0 has arrived. Relive the 2018 Championship journey of the French Team and claim exclusive rewards.
+                </div>
               </div>
-            </div>
 
-            <div class="ann-item">
-              <div class="ann-tag">Feature</div>
-              <div class="ann-text">
-                Improved set pieces: more challenging and realistic free kicks and rebalanced penalties.
+              <div class="ann-item">
+                <div class="ann-tag">Feature</div>
+                <div class="ann-text">
+                  Improved set pieces: more challenging and realistic free kicks and rebalanced penalties.
+                </div>
               </div>
-            </div>
 
+            </div>
           </div>
+
         </div>
       </div>
 
-      <!-- RIGHT SIDE -->
-      <div class="hero-right">
-
-        <!-- PLAYER SLIDESHOW -->
-        <div class="hero-player-slideshow">
-          <img class="player-slide active" src="assets/branding/manchestercity.JPG" alt="Manchester City licensed kits">
-          <img class="player-slide" src="assets/promo/Football_League_AC_Monaco.jpg" alt="AS Monaco licensed kits">
-        </div>
-
-        <!-- GAMEPLAY SLIDESHOW -->
-        <div class="hero-card hero-slideshow">
-          <div class="slide active">
-            <img src="assets/features/football-league-2026-midfield-attack.webp" alt="Midfield attack gameplay">
-          </div>
-
-          <div class="slide">
-            <img src="assets/gameplay/slideshow_gameply_action_field.jpg" alt="Football League stadium moment">
-          </div>
-
-          <div class="slide">
-            <img src="assets/gameplay/gameplay_action_7.jpg" alt="Matchday action">
-          </div>
-
-          <div class="slide">
-            <img src="assets/features/football-league-2026-goal-attempt.webp" alt="Goal attempt cinematic">
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 
@@ -293,7 +393,7 @@
 
         <article class="highlight-card">
           <h3>Live Events</h3>
-          <p>Fresh challenges arrive regularly — earn coins, unlock rewards, and boost your team with exclusive items.</p>
+          <p>Fresh challenges arrive regularly — earn coins, unlock special rewards, and boost your team with exclusive items.</p>
         </article>
 
       </div>
@@ -305,7 +405,7 @@
 <!-- Footer include placeholder -->
 <footer class="site-footer" id="footer-include"></footer>
 
-<!-- Footer loader + slideshow -->
+<!-- Footer loader + hero slideshow script -->
 <script>
   // Load shared footer include
   (async function loadFooter() {
@@ -321,19 +421,77 @@
     }
   })();
 
-  // Player slideshow fade
+  // Full-width hero slideshow logic (fade + slight zoom)
   document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".hero-player-slideshow .player-slide");
-    let index = 0;
+    const slides = Array.from(document.querySelectorAll(".hero-slide"));
+    const dots = Array.from(document.querySelectorAll(".hero-dot"));
+    const prevBtn = document.querySelector(".hero-prev");
+    const nextBtn = document.querySelector(".hero-next");
 
-    setInterval(() => {
+    if (!slides.length) return;
+
+    let index = 0;
+    const SLIDE_INTERVAL = 8000; // 8s to match Ken Burns animation
+    let timer = null;
+
+    function showSlide(newIndex) {
       slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
+      dots[index]?.classList.remove("active");
+
+      index = (newIndex + slides.length) % slides.length;
+
       slides[index].classList.add("active");
-    }, 4000);
+      dots[index]?.classList.add("active");
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function prevSlide() {
+      showSlide(index - 1);
+    }
+
+    function startAuto() {
+      stopAuto();
+      timer = setInterval(nextSlide, SLIDE_INTERVAL);
+    }
+
+    function stopAuto() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    // Dots click
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        const i = Number(dot.dataset.index);
+        showSlide(i);
+        startAuto();
+      });
+    });
+
+    // Arrows
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        prevSlide();
+        startAuto();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        nextSlide();
+        startAuto();
+      });
+    }
+
+    // Start autoplay
+    startAuto();
   });
 </script>
 
 </body>
 </html>
-
