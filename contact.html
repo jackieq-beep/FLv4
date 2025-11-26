@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
   <!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/icons/favicon_glow.png">
-<link rel="apple-touch-icon" href="assets/icons/favicon_glow.png">
-<meta name="msapplication-TileImage" content="assets/icons/favicon_glow.png">
+  <link rel="icon" type="image/png" href="assets/icons/favicon_glow.png">
+  <link rel="apple-touch-icon" href="assets/icons/favicon_glow.png">
+  <meta name="msapplication-TileImage" content="assets/icons/favicon_glow.png">
   
-<meta charset="UTF-8" />
-<title>Football League 2026</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/style.css" />
-<script defer src="scripts/main.js"></script>
+  <meta charset="UTF-8" />
+  <title>Football League 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- Scripts -->
+  <script defer src="scripts/main.js"></script>
 </head>
+
 <body>
+
 <header class="site-header">
   <div class="nav-inner">
     <a href="index.html" class="brand">
@@ -24,6 +31,7 @@
         <span class="brand-subtitle">Mobile Soccer</span>
       </div>
     </a>
+
     <nav class="main-nav">
       <a href="downloads.html">Download</a>
       <a href="features.html">Features</a>
@@ -31,6 +39,7 @@
       <a href="news.html">News</a>
       <a href="contact.html">Contact</a>
     </nav>
+
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
@@ -45,34 +54,37 @@
         <p class="section-intro">
           Got a question, a cool idea, or feedback about the game? Drop us a line.
         </p>
+
         <div class="contact-block">
           <h2>General Inquiries</h2>
           <a href="mailto:support@footballleaguegame.com">support@footballleaguegame.com</a>
         </div>
-     
       </div>
+
       <div class="contact-art">
         <img src="assets/ui/ui_screen_7.png" alt="Football League 2026 interface" loading="lazy" />
       </div>
     </div>
   </section>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="assets/branding/logo_icon.png" alt="Football League 2026">
-      <span>Football League 2026</span>
-    </div>
-    <div class="footer-links">
-      <a href="downloads.html">Download</a>
-      <a href="features.html">Features</a>
-      <a href="community.html">Community</a>
-      <a href="news.html">News</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <p class="footer-meta">*Licenses and content may vary by region.</p>
-  </div>
-</footer>
+
+<!-- ⭐ New footer include slot -->
+<footer class="site-footer" id="footer-include"></footer>
+
+<!-- ⭐ Footer include loader -->
+<script>
+  async function loadFooter() {
+    const footer = document.getElementById("footer-include");
+    try {
+      const response = await fetch("includes/footer.html");
+      const html = await response.text();
+      footer.innerHTML = html;
+    } catch (e) {
+      console.error("Footer failed to load:", e);
+    }
+  }
+  loadFooter();
+</script>
 
 </body>
 </html>
