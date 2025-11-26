@@ -74,16 +74,46 @@
     }
 
     /* ----------------------------------------------------- */
+    /* HERO CARDS / SLIDESHOWS – FIXED ASPECT RATIO FOR iOS  */
+    /* ----------------------------------------------------- */
+
+    /* Base hero cards (right side) */
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    /* Player portrait card – more vertical */
+    .hero-card.hero-player {
+      aspect-ratio: 3 / 4; /* tweak if you want more/less height */
+    }
+
+    /* Gameplay slideshow card – more horizontal */
+    .hero-card.hero-slideshow {
+      aspect-ratio: 16 / 9;
+    }
+
+    /* Ensure images always fill their cards */
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ----------------------------------------------------- */
     /* PLAYER IMAGE 2-IMAGE SLIDESHOW (TOP-RIGHT IMAGE AREA) */
     /* ----------------------------------------------------- */
     .hero-player-slideshow {
       position: relative;
+      width: 100%;
+      height: 100%;
     }
 
     .hero-player-slideshow .player-slide {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -95,24 +125,29 @@
     .hero-player-slideshow .player-slide.active {
       opacity: 1;
     }
+
+    /* ----------------------------------------------------- */
+    /* GAMEPLAY SLIDESHOW IMAGES (BOTTOM HERO CARD)          */
+    /* ----------------------------------------------------- */
+    .hero-slideshow .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    .hero-slideshow .slide.active {
+      opacity: 1;
+    }
+
+    /* Make sure hero-slideshow is a positioned container */
+    .hero-card.hero-slideshow {
+      position: relative;
+    }
   </style>
 
   <!-- Scripts -->
   <script defer src="scripts/main.js"></script>
-
-  <!-- Inline slideshow script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const slides = document.querySelectorAll(".hero-player-slideshow .player-slide");
-      let index = 0;
-
-      setInterval(() => {
-        slides[index].classList.remove("active");
-        index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
-      }, 4000);
-    });
-  </script>
 
 </head>
 
@@ -142,172 +177,190 @@
 
 <main>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
 
-    <!-- LEFT SIDE -->
-    <div class="hero-left">
-      <div class="hero-tag">NEW SEASON</div>
-      <h1>Feels Like Match Day</h1>
+      <!-- LEFT SIDE -->
+      <div class="hero-left">
+        <div class="hero-tag">NEW SEASON</div>
+        <h1>Feels Like Match Day</h1>
 
-      <p class="hero-subtitle">
-        Create your ultimate squad, take on global rivals, and dive into the full match-day rush that defines Football League 2026
+        <p class="hero-subtitle">
+          Create your ultimate squad, take on global rivals, and dive into the full match-day rush that defines Football League 2026
+        </p>
+
+        <!-- Store Buttons -->
+        <div class="store-buttons">
+          <a class="store-btn gp" href="https://play.google.com/store/apps/details?id=com.football.soccer.league" target="_blank" rel="noopener">
+            <span class="store-label">GET IT ON</span>
+            <span class="store-name">Google Play</span>
+          </a>
+          <a class="store-btn ios" href="https://apps.apple.com/us/app/football-league-2025/id6447961802" target="_blank" rel="noopener">
+            <span class="store-label">Download on the</span>
+            <span class="store-name">App Store</span>
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span>Real Leagues &amp; Clubs*</span>
+          <span>Online &amp; offline play</span>
+          <span>Free to play</span>
+        </div>
+
+        <!-- Leagues Text -->
+        <div class="leagues-copy enhanced-leagues">
+
+          <p>
+            Compete across global-inspired Leagues and Cups that mirror the drama of real-world football,
+            from title races to knockout nights.
+          </p>
+
+          <p>
+            New teams, tournaments, and themed events drop regularly so your career, campaigns, and rivalries
+            always stay fresh.
+          </p>
+
+          <!-- LATEST ANNOUNCEMENTS -->
+          <div class="latest-announcements">
+            <h3 class="ann-title">Latest Announcements</h3>
+
+            <div class="ann-list">
+
+              <div class="ann-item">
+                <div class="ann-tag">Official</div>
+                <div class="ann-text">
+                  Official Manchester City kits and AS Monaco licenses have arrived in Football League 2026. Authentic looks. Elite football. Play the season in true club colors.
+                </div>
+              </div>
+
+              <div class="ann-item">
+                <div class="ann-tag">Event</div>
+                <div class="ann-text">
+                  Road to Champion Challenge 4.0 has arrived. Relive the 2018 Championship journey of the French Team and claim exclusive rewards.
+                </div>
+              </div>
+
+              <div class="ann-item">
+                <div class="ann-tag">Feature</div>
+                <div class="ann-text">
+                  Improved set pieces: more challenging and realistic free kicks and rebalanced penalties.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="hero-right">
+
+        <!-- Player slideshow (top-right) -->
+        <div class="hero-card hero-player hero-player-slideshow">
+          <img class="player-slide active" src="assets/branding/manchestercity.JPG" alt="Manchester City player in Football League 2026">
+          <img class="player-slide" src="assets/promo/Football_League_AC_Monaco.jpg" alt="AS Monaco player in Football League 2026">
+        </div>
+
+        <!-- Gameplay slideshow (bottom-right) -->
+        <div class="hero-card hero-slideshow">
+          <div class="slide active">
+            <img src="assets/features/football-league-2026-midfield-attack.webp" alt="Midfield attack in Football League 2026">
+          </div>
+
+          <div class="slide">
+            <img src="assets/gameplay/slideshow_gameply_action_field.jpg" alt="Football League 2026 stadium gameplay">
+          </div>
+
+          <div class="slide">
+            <img src="assets/gameplay/gameplay_action_7.jpg" alt="Matchday action in Football League 2026">
+          </div>
+
+          <div class="slide">
+            <img src="assets/features/football-league-2026-goal-attempt.webp" alt="Goal attempt in Football League 2026">
+          </div>
+
+          <div class="slideshow-dots">
+            <button class="dot active" data-index="0" aria-label="Show slide 1"></button>
+            <button class="dot" data-index="1" aria-label="Show slide 2"></button>
+            <button class="dot" data-index="2" aria-label="Show slide 3"></button>
+            <button class="dot" data-index="3" aria-label="Show slide 4"></button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="section section-highlights">
+    <div class="section-inner">
+
+      <h2 class="section-title">Next-Gen Mobile Football</h2>
+
+      <p class="section-intro">
+        Realistic football, tactical depth, and stylized visuals built for global players.
       </p>
 
-      <!-- Store Buttons -->
-      <div class="store-buttons">
-        <a class="store-btn gp" href="https://play.google.com/store/apps/details?id=com.football.soccer.league" target="_blank">
-          <span class="store-label">GET IT ON</span>
-          <span class="store-name">Google Play</span>
-        </a>
-        <a class="store-btn ios" href="https://apps.apple.com/us/app/football-league-2025/id6447961802" target="_blank">
-          <span class="store-label">Download on the</span>
-          <span class="store-name">App Store</span>
-        </a>
-      </div>
+      <div class="highlight-grid">
 
-      <div class="hero-meta">
-        <span>Real Leagues &amp; Clubs*</span>
-        <span>Online & offline play</span>
-        <span>Free to play</span>
-      </div>
+        <article class="highlight-card">
+          <h3>Dynamic Match Engine</h3>
+          <p>Smart AI, responsive controls, and fluid animations power every match.</p>
+        </article>
 
-      <!-- Leagues Text -->
-      <div class="leagues-copy enhanced-leagues">
+        <article class="highlight-card">
+          <h3>Tactics Style</h3>
+          <p>New tactical styles introduced, offering different playing instructions to match your strategy.</p>
+        </article>
 
-        <p>
-          Compete across global-inspired Leagues and Cups that mirror the drama of real-world football,
-          from title races to knockout nights.
-        </p>
-
-        <p>
-          New teams, tournaments, and themed events drop regularly so your career, campaigns, and rivalries
-          always stay fresh.
-        </p>
-
-        <!-- LATEST ANNOUNCEMENTS -->
-        <div class="latest-announcements">
-          <h3 class="ann-title">Latest Announcements</h3>
-
-          <div class="ann-list">
-
-            <div class="ann-item">
-              <div class="ann-tag">Official</div>
-              <div class="ann-text">
-                Official Manchester City kits and AS Monaco licenses have arrived in Football League 2026. Authentic looks. Elite football. Play the season in true club colors.
-              </div>
-            </div>
-
-            <div class="ann-item">
-              <div class="ann-tag">Event</div>
-              <div class="ann-text">
-                Road to Champion Challenge 4.0 has arrived. Relive the 2018 Championship journey of the French Team and claim exclusive rewards.
-              </div>
-            </div>
-
-            <div class="ann-item">
-              <div class="ann-tag">Feature</div>
-              <div class="ann-text">
-                Improved set peices: more challenging and realistic free kicks and rebalanced penalties
-              </div>
-            </div>
-
-          </div>
-        </div>
+        <article class="highlight-card">
+          <h3>Live Events</h3>
+          <p>Fresh challenges arrive regularly, earn coins, unlock special rewards, and boost your team with exclusive event items.</p>
+        </article>
 
       </div>
     </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="hero-right">
-
-      <!-- ⭐ UPDATED: Player slideshow instead of single image -->
-      <div class="hero-card hero-player hero-player-slideshow">
-        <img class="player-slide active" src="assets/branding/manchestercity.JPG" alt="Slide 1">
-        <img class="player-slide" src="assets/promo/Football_League_AC_Monaco.jpg" alt="Slide 2">
-      </div>
-
-      <!-- Existing gameplay slideshow (unchanged) -->
-      <div class="hero-card hero-slideshow">
-        <div class="slide active">
-          <img src="assets/features/football-league-2026-midfield-attack.webp" alt="Midfield Attack Football League 2026">
-        </div>
-
-        <div class="slide">
-          <img src="assets/gameplay/slideshow_gameply_action_field.jpg" alt="Stadium">
-        </div>
-
-        <div class="slide">
-          <img src="assets/gameplay/gameplay_action_7.jpg" alt="Matchday Action">
-        </div>
-
-        <div class="slide">
-          <img src="assets/features/football-league-2026-goal-attempt.webp" alt="Football League 2026 Goal Attempt">
-        </div>
-
-        <div class="slideshow-dots">
-          <button class="dot active" data-index="0"></button>
-          <button class="dot" data-index="1"></button>
-          <button class="dot" data-index="2"></button>
-          <button class="dot" data-index="3"></button>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- HIGHLIGHTS -->
-<section class="section section-highlights">
-  <div class="section-inner">
-
-    <h2 class="section-title">Next-Gen Mobile Football</h2>
-
-    <p class="section-intro">
-      Realistic football, tactical depth, and stylized visuals built for global players.
-    </p>
-
-    <div class="highlight-grid">
-
-      <article class="highlight-card">
-        <h3>Dynamic Match Engine</h3>
-        <p>Smart AI, responsive controls, and fluid animations power every match.</p>
-      </article>
-
-      <article class="highlight-card">
-        <h3>Tactics Style</h3>
-        <p>New tactical styles introduced, offering different playing instructions to match your stategy</p>
-      </article>
-
-      <article class="highlight-card">
-        <h3>Live Events</h3>
-        <p>Fresh challenges arrive regularly, earn coins, unlock special rewards, and boost your team with exclusive event items.</p>
-      </article>
-
-    </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
-<!-- ⭐ Footer include placeholder -->
+<!-- Footer include placeholder -->
 <footer class="site-footer" id="footer-include"></footer>
 
-<!-- ⭐ Footer include loader -->
+<!-- Footer include loader + player slideshow script -->
 <script>
-  async function loadFooter() {
+  // Load shared footer include
+  (async function loadFooter() {
     const footer = document.getElementById("footer-include");
+    if (!footer) return;
+
     try {
       const response = await fetch("includes/footer.html");
+      if (!response.ok) throw new Error("Network response was not ok");
       const html = await response.text();
       footer.innerHTML = html;
     } catch (e) {
       console.error("Footer failed to load:", e);
     }
-  }
-  loadFooter();
+  })();
+
+  // Simple 2-image player slideshow (top-right hero card)
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".hero-player-slideshow .player-slide");
+    if (!slides.length) return;
+
+    let index = 0;
+    slides[0].classList.add("active");
+
+    setInterval(function () {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 4000);
+  });
 </script>
 
 </body>
