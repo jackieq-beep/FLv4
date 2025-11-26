@@ -3,9 +3,9 @@
 <head>
 
   <!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/icons/favicon_glow.png">
-<link rel="apple-touch-icon" href="assets/icons/favicon_glow.png">
-<meta name="msapplication-TileImage" content="assets/icons/favicon_glow.png">
+  <link rel="icon" type="image/png" href="assets/icons/favicon_glow.png">
+  <link rel="apple-touch-icon" href="assets/icons/favicon_glow.png">
+  <meta name="msapplication-TileImage" content="assets/icons/favicon_glow.png">
 
   <meta charset="UTF-8" />
   <title>Game Features | Football League 2026</title>
@@ -29,6 +29,7 @@
         <span class="brand-subtitle">Mobile Soccer</span>
       </div>
     </a>
+
     <nav class="main-nav">
       <a href="downloads.html">Download</a>
       <a href="features.html" class="active">Features</a>
@@ -36,6 +37,7 @@
       <a href="news.html">News</a>
       <a href="contact.html">Contact</a>
     </nav>
+
     <button class="nav-toggle"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -91,12 +93,12 @@
 
           <h3>Women’s Competitions</h3>
           <p>Inclusive leagues and tournaments celebrating women's football.</p>
-        
+
           <h3>Friendlies & Drills</h3>
           <p>Practice skills in friendlies and master free kicks, penalties, and set pieces.</p>
 
           <img src="assets/features/football_training_drills.jpg" alt="Free kick and penalty practice UI" loading="lazy" />
-              </article>
+        </article>
 
         <!-- COLUMN 3 -->
         <article class="feature-card">
@@ -149,25 +151,23 @@
 
 </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="assets/branding/logo_icon.png" alt="Football League 2026 logo">
-      <span>Football League 2026</span>
-    </div>
+<!-- ⭐ Footer include placeholder -->
+<footer class="site-footer" id="footer-include"></footer>
 
-    <div class="footer-links">
-      <a href="downloads.html">Download</a>
-      <a href="features.html" class="active">Features</a>
-      <a href="community.html">Community</a>
-      <a href="news.html">News</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <p class="footer-meta">*Licenses and content may vary by region.</p>
-  </div>
-</footer>
+<!-- ⭐ Footer include loader -->
+<script>
+  async function loadFooter() {
+    const footer = document.getElementById("footer-include");
+    try {
+      const response = await fetch("includes/footer.html");
+      const html = await response.text();
+      footer.innerHTML = html;
+    } catch (e) {
+      console.error("Footer failed to load:", e);
+    }
+  }
+  loadFooter();
+</script>
 
 </body>
 </html>
-
