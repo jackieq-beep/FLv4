@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Football League 2026</title>
 
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -73,10 +72,49 @@
         font-size: .9rem;
       }
     }
+
+
+    /* ----------------------------------------------------- */
+    /* PLAYER IMAGE 2-IMAGE SLIDESHOW (TOP-RIGHT IMAGE AREA) */
+    /* ----------------------------------------------------- */
+    .hero-player-slideshow {
+      position: relative;
+    }
+
+    .hero-player-slideshow .player-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+
+    .hero-player-slideshow .player-slide.active {
+      opacity: 1;
+    }
   </style>
 
   <!-- Scripts -->
   <script defer src="scripts/main.js"></script>
+
+  <!-- Inline slideshow script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const slides = document.querySelectorAll(".hero-player-slideshow .player-slide");
+      let index = 0;
+
+      setInterval(() => {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+      }, 4000);
+    });
+  </script>
+
 </head>
 
 <body>
@@ -183,12 +221,13 @@
     <!-- RIGHT SIDE -->
     <div class="hero-right">
 
-      <!-- Hero Character -->
-      <div class="hero-card hero-player">
-        <img src="assets/branding/manchestercity.JPG" alt="Manchester City Promo">
+      <!-- ⭐ UPDATED: Player slideshow instead of single image -->
+      <div class="hero-card hero-player hero-player-slideshow">
+        <img class="player-slide active" src="assets/branding/manchestercity.JPG" alt="Slide 1">
+        <img class="player-slide" src="assets/promo/Football_League_AC_Monaco.jpg" alt="Slide 2">
       </div>
 
-      <!-- Slideshow -->
+      <!-- Existing gameplay slideshow (unchanged) -->
       <div class="hero-card hero-slideshow">
         <div class="slide active">
           <img src="assets/gameplay/slideshow_gameply_action_closeup.jpg" alt="Stadiums Under the Lights">
