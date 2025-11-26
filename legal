@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="icon" type="image/png" href="assets/icons/favicon_glow.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal | Football League 2026</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- Scripts -->
+  <script defer src="scripts/main.js"></script>
+
+  <style>
+    .legal-container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      font-size: 1rem;
+    }
+
+    .legal-container h1 {
+      font-family: "Teko", sans-serif;
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      color: #fff;
+      letter-spacing: .05em;
+      margin-bottom: 24px;
+    }
+
+    .legal-container h2 {
+      font-family: "Teko", sans-serif;
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      color: #fff;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      letter-spacing: .04em;
+    }
+
+    .legal-container h3 {
+      font-family: "Teko", sans-serif;
+      font-size: 1.25rem;
+      color: #fff;
+      margin-top: 22px;
+      margin-bottom: 8px;
+    }
+
+    .legal-container p,
+    .legal-container li {
+      margin-bottom: 14px;
+    }
+
+    .legal-container ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/branding/logo_icon.png" alt="Football League 2026" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-title">Football League 2026</span>
+        <span class="brand-subtitle">Mobile Soccer</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="downloads.html">Download</a>
+      <a href="features.html">Features</a>
+      <a href="community.html">Community</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="legal-container">
+
+    <h1>Legal Information</h1>
+    <p><strong>Last Updated: December 2026</strong></p>
+    <p>
+      This combined Legal page includes our Privacy Policy, Terms of Service,
+      Cookie Notice, and Licensing & Trademark Disclaimers for Football League 2026.
+    </p>
+
+    <!-- PRIVACY POLICY -->
+    <h2>1. Privacy Policy</h2>
+
+    <h3>Information We Collect</h3>
+    <p>
+      We keep data collection minimal. This website may collect basic analytics
+      such as page views, traffic sources, device types, and general error logs.
+      We do not collect personal information such as names, addresses, or payment data.
+    </p>
+
+    <h3>How We Use Information</h3>
+    <p>
+      Data is used solely to improve website performance, understand traffic patterns,
+      diagnose technical issues, and support marketing for Football League 2026.
+    </p>
+
+    <h3>Cookies & Tracking</h3>
+    <p>We may use:</p>
+    <ul>
+      <li>Google Analytics</li>
+      <li>YouTube or TikTok embeds</li>
+      <li>App store–related tracking pixels</li>
+    </ul>
+    <p>You may disable cookies in your browser at any time.</p>
+
+    <h3>Third-Party Services</h3>
+    <p>
+      Our site links to third-party platforms such as Google Play, Apple App Store,
+      YouTube, TikTok, and social media sites. Their respective privacy policies apply.
+    </p>
+
+    <h3>Data Security</h3>
+    <p>
+      Reasonable security measures are used, though no online service can
+      guarantee 100% protection.
+    </p>
+
+    <h3>Children’s Privacy</h3>
+    <p>
+      This site is general-audience and not directed at children under 13.
+      No personal data from children is collected.
+    </p>
+
+    <h3>Your Rights</h3>
+    <p>
+      You may request access or deletion of data or ask about cookies by contacting:
+      <strong>support@footballleaguegame.com</strong>
+    </p>
+
+    <!-- TERMS OF SERVICE -->
+    <h2>2. Terms of Service</h2>
+
+    <h3>Use of This Website</h3>
+    <p>
+      By accessing this site, you agree not to misuse it, attempt unauthorized access,
+      or copy/reuse content without permission.
+    </p>
+
+    <h3>Intellectual Property</h3>
+    <p>
+      All media—including images, renders, logos, gameplay footage, and text—is owned
+      by Football League or licensed from partners such as Manchester City and AS Monaco.
+      Unauthorized use is prohibited.
+    </p>
+
+    <h3>Disclaimers</h3>
+    <p>
+      The site is provided “as is” without warranties. We are not responsible for
+      technical errors, device issues, or third-party content.
+    </p>
+
+    <h3>App Store Links</h3>
+    <p>
+      Downloading or purchasing the game is governed by Apple and Google’s respective terms.
+    </p>
+
+    <h3>Limitation of Liability</h3>
+    <p>
+      We are not liable for indirect damages, hosting issues, tracking behavior by third parties,
+      or data loss.
+    </p>
+
+    <!-- COOKIE NOTICE -->
+    <h2>3. Cookie Notice</h2>
+
+    <h3>Types of Cookies Used</h3>
+    <ul>
+      <li>Analytics cookies</li>
+      <li>Performance-related cookies</li>
+      <li>Embedded media cookies (YouTube, TikTok)</li>
+      <li>Outbound tracking cookies for app stores</li>
+    </ul>
+
+    <h3>Your Choices</h3>
+    <p>
+      You can disable cookies in your browser, block third-party cookies, or
+      browse in private mode. Some features (like videos) may be affected.
+    </p>
+
+    <!-- LICENSING -->
+    <h2>4. Licensing & Trademark Disclaimer</h2>
+
+    <h3>Licensing Notice</h3>
+    <p>
+      Football League 2026 may include official Manchester City kits, AS Monaco kits,
+      and certain licensed national team elements. All trademarks, club names, crests,
+      player likenesses, and logos belong to their respective owners.
+    </p>
+
+    <h3>No Unaffiliated Organization Endorsement</h3>
+    <p>
+      Unless explicitly stated, Football League 2026 is not affiliated with FIFA, UEFA,
+      CONMEBOL, CONCACAF, the Premier League, or any football governing body.
+    </p>
+
+    <h3>Media Rights</h3>
+    <p>
+      All images, renders, gameplay videos, UI assets, and promotional artwork
+      on this website are owned or properly licensed by Football League.
+      Reuse requires written permission.
+    </p>
+
+    <h3>Fan Content</h3>
+    <p>
+      Fans may create non-commercial videos, art, or reviews. Commercial use
+      requires prior approval.
+    </p>
+
+    <!-- CONTACT -->
+    <h2>Contact</h2>
+    <p>
+      For privacy, licensing, or legal questions, contact:
+      <strong>support@footballleaguegame.com</strong>
+    </p>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/branding/logo_icon.png" alt="Football League 2026">
+      <span>Football League 2026</span>
+    </div>
+
+    <div class="footer-links">
+      <a href="downloads.html">Download</a>
+      <a href="features.html">Features</a>
+      <a href="community.html">Community</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a href="legal.html">Legal</a>
+    </div>
+
+    <p class="footer-meta">*Licenses and content may vary by region.</p>
+  </div>
+</footer>
+
+</body>
+</html>
