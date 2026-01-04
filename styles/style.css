@@ -165,4 +165,214 @@ a{text-decoration:none;color:inherit}
   letter-spacing: 0.3px;
   margin-top: 0.4rem;
 }
+/* =========================================================
+   PARTNERS / COMMERCIAL INFRASTRUCTURE
+   Isolated module — does NOT affect homepage
+   ========================================================= */
+
+/* ---------- Partners Page Hero ---------- */
+.fl-partners-hero {
+  padding: 84px 16px 36px;
+}
+
+.fl-partners-hero__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.fl-partners-hero__eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  border: 1px solid rgba(39,229,255,.45);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.fl-partners-hero__title {
+  font-family: "Teko", system-ui, sans-serif;
+  font-size: 3.2rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 10px 0 12px;
+}
+
+.fl-partners-hero__subtitle {
+  max-width: 42rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.fl-partners-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.fl-partners-hero__button {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,.18);
+  background: linear-gradient(135deg, rgba(39,229,255,.12), rgba(255,62,165,.12));
+  color: var(--text-main);
+}
+
+.fl-partners-hero__button:hover {
+  border-color: var(--accent-cyan);
+}
+
+.fl-partners-hero__link {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ---------- Partner Content Section ---------- */
+.fl-partner {
+  padding: 28px 16px 80px;
+}
+
+.fl-partner__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.fl-partner__header {
+  margin-bottom: 18px;
+}
+
+.fl-partner__eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.fl-partner__title {
+  font-family: "Teko", system-ui, sans-serif;
+  font-size: 2.1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.fl-partner__subtitle {
+  max-width: 40rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Partner Cards ---------- */
+.fl-partner__grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.fl-partner__card {
+  border-radius: 18px;
+  background: #0b0d26;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.fl-partner__summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.fl-partner__summary::-webkit-details-marker {
+  display: none;
+}
+
+.fl-partner__hint {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.16em;
+}
+
+.fl-partner__content {
+  padding: 0 18px 18px;
+}
+
+.fl-partner__list {
+  padding-left: 18px;
+  margin: 12px 0 0;
+}
+
+.fl-partner__list li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.fl-partner__list strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.fl-partner__note {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Partner CTA ---------- */
+.fl-partner__cta {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.fl-partner__button {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,.18);
+  background: linear-gradient(135deg, rgba(39,229,255,.12), rgba(255,62,165,.12));
+}
+
+.fl-partner__button:hover {
+  border-color: var(--accent-cyan);
+}
+
+.fl-partner__link {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 900px) {
+  .fl-partner__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .fl-partners-hero__title {
+    font-size: 3.8rem;
+  }
+}
 
