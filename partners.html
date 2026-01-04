@@ -1,126 +1,304 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Partners | Football League</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon_glow.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football League 2026 — Partners</title>
 
-  <!-- IMPORTANT:
-    Update this to match whatever stylesheet your site uses.
-    Example: /styles/style.css or /assets/css/main.css
-  -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Main Styles -->
   <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- Social preview (optional but nice) -->
-  <meta property="og:title" content="Football League — Partners" />
-  <meta property="og:description" content="A compact overview for brands & agencies. The game stays the hero." />
+  <!-- Optional: keep it out of search (not security) -->
+  <meta name="robots" content="noindex, nofollow" />
 </head>
 
-<body>
+<body class="partners-page">
 
-  <!-- Optional: reuse your site header/nav.
-       If your site uses a shared header snippet, copy it from index.html here. -->
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-logo" href="index.html">Football League</a>
-      <nav class="site-nav">
-        <a href="index.html">Home</a>
-        <a href="partners.html" aria-current="page">Partners</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/branding/logo_icon.png" alt="Football League 2026" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-title">Football League 2026</span>
+        <span class="brand-subtitle">Mobile Soccer</span>
+      </div>
+    </a>
 
-  <main>
-    <!-- Hero -->
-    <section class="fl-partners-hero">
-      <div class="fl-partners-hero__inner">
-        <p class="fl-partners-hero__eyebrow">For Brands & Agencies</p>
-        <h1 class="fl-partners-hero__title">Partner-Ready, Player-First</h1>
-        <p class="fl-partners-hero__subtitle">
-          A compact overview of commercial readiness — without turning the game site into a sales page.
+    <!-- Keep Partners out of header nav (footer-only discoverable) -->
+    <nav class="main-nav">
+      <a href="downloads.html">Download</a>
+      <a href="features.html">Features</a>
+      <a href="community.html">Community</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO: Premium broadcast-style -->
+  <section class="partners-hero">
+    <div class="sponsors-hero__inner">
+      <div class="sponsors-hero__glass">
+        <div class="sponsors-hero__badge">For Brands &amp; Agencies</div>
+
+        <h1 class="sponsors-hero__title">
+          Premium In-Game Partnerships
+          <span class="sponsors-hero__titleAccent">Built Like Broadcast</span>
+        </h1>
+
+        <p class="sponsors-hero__sub">
+          Football League offers <strong>premium, measurable</strong> in-game partnership inventory —
+          designed to live inside match flow, not outside it.
         </p>
 
-        <div class="fl-partners-hero__actions">
-          <!-- Update these links if you already have pages -->
-          <a class="fl-partners-hero__button" href="contact.html">Partnership inquiries</a>
-          <a class="fl-partners-hero__link" href="index.html">Back to the game</a>
+        <div class="sponsors-hero__stats">
+          <div class="sponsors-stat">
+            <div class="sponsors-stat__kicker">Context</div>
+            <div class="sponsors-stat__value">Sports-native</div>
+          </div>
+          <div class="sponsors-stat">
+            <div class="sponsors-stat__kicker">Attention</div>
+            <div class="sponsors-stat__value">Lean-in play</div>
+          </div>
+          <div class="sponsors-stat">
+            <div class="sponsors-stat__kicker">Measurement</div>
+            <div class="sponsors-stat__value">Viewable + time</div>
+          </div>
+        </div>
+
+        <div class="sponsors-hero__actions">
+          <a class="sponsors-btn sponsors-btn--primary" href="contact.html">
+            <span class="sponsors-btn__small">Partnership inquiries</span>
+            <span class="sponsors-btn__big">Contact</span>
+          </a>
+
+          <a class="sponsors-btn sponsors-btn--secondary" href="legal.html">
+            <span class="sponsors-btn__small">Policies</span>
+            <span class="sponsors-btn__big">Brand Safety</span>
+          </a>
+        </div>
+
+        <div class="sponsors-hero__fineprint">
+          Player-first integration — no disruptive interstitials, no cheap overlay energy.
         </div>
       </div>
-    </section>
 
-    <!-- The sponsor pocket -->
-    <section class="fl-partner" id="partner-ready">
-      <div class="fl-partner__inner">
-        <header class="fl-partner__header">
-          <p class="fl-partner__eyebrow">Commercial Infrastructure</p>
-          <h2 class="fl-partner__title">What You Need, Kept Simple</h2>
-          <p class="fl-partner__subtitle">
-            High-level signals on why in-game works, what inventory exists, and how reporting is handled.
-          </p>
-        </header>
-
-        <div class="fl-partner__grid">
-          <details class="fl-partner__card" open>
-            <summary class="fl-partner__summary">
-              <span>Why In-Game Works</span>
-              <span class="fl-partner__hint">3 signals</span>
-            </summary>
-            <div class="fl-partner__content">
-              <ul class="fl-partner__list">
-                <li><strong>Lean-in attention:</strong> visibility during active play — not passive scrolling.</li>
-                <li><strong>Repetition:</strong> exposure compounds across matches, sessions, and replays.</li>
-                <li><strong>Context:</strong> placements live inside broadcast-style moments (kickoff, goals, highlights).</li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="fl-partner__card">
-            <summary class="fl-partner__summary">
-              <span>Sponsorship Inventory</span>
-              <span class="fl-partner__hint">high level</span>
-            </summary>
-            <div class="fl-partner__content">
-              <ul class="fl-partner__list">
-                <li><strong>Match Presented By</strong> (intro, scoreboard, replays, match flow moments)</li>
-                <li><strong>Always-On</strong> placements (stadium + UI, brand-safe, persistent)</li>
-                <li><strong>Broadcast moments</strong> (walkouts, lineups, halftime, player of the match)</li>
-              </ul>
-              <p class="fl-partner__note">
-                If you want, link your full inventory schedule as a PDF or a private deck after first contact.
-              </p>
-            </div>
-          </details>
-
-          <details class="fl-partner__card">
-            <summary class="fl-partner__summary">
-              <span>Measurement & Reporting</span>
-              <span class="fl-partner__hint">credible</span>
-            </summary>
-            <div class="fl-partner__content">
-              <ul class="fl-partner__list">
-                <li><strong>Viewable exposure:</strong> branding is rendered in the visible viewport.</li>
-                <li><strong>Time-based visibility:</strong> supports duration thresholds where relevant.</li>
-                <li><strong>Reporting cadence:</strong> match-level + campaign summaries (weekly/monthly).</li>
-              </ul>
-            </div>
-          </details>
+      <!-- Right rail: “broadcast rundown” -->
+      <aside class="sponsors-hero__rail">
+        <div class="sponsors-railCard">
+          <div class="sponsors-railCard__title">What partners get</div>
+          <ul class="sponsors-railCard__list">
+            <li>Broadcast-style placements inside match moments</li>
+            <li>Repeat exposure across sessions and replays</li>
+            <li>Reporting built for agencies &amp; brands</li>
+          </ul>
         </div>
 
-        <div class="fl-partner__cta">
-          <a class="fl-partner__button" href="contact.html">Partnership inquiries</a>
-          <a class="fl-partner__link" href="legal.html">Brand safety & policies</a>
+        <div class="sponsors-railCard">
+          <div class="sponsors-railCard__title">Measurement signals</div>
+          <div class="sponsors-pillRow">
+            <span class="sponsors-pill">Rendered in viewport</span>
+            <span class="sponsors-pill">Not obscured</span>
+            <span class="sponsors-pill">Time thresholds</span>
+            <span class="sponsors-pill">Match-level logs</span>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer (copy yours here if you have one) -->
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <span>© Football League</span>
-      <a href="partners.html">For Brands &amp; Agencies</a>
+      </aside>
     </div>
-  </footer>
+
+    <!-- Decorative broadcast lines -->
+    <div class="sponsors-broadcastLines" aria-hidden="true"></div>
+  </section>
+
+  <!-- SECTION: Match Presented By -->
+  <section class="section sponsors-section" id="match-presented">
+    <div class="section-inner">
+      <div class="sponsors-section__header reveal">
+        <h2 class="section-title">Match Presented By</h2>
+        <p class="section-intro">
+          Your brand becomes the match identity — anchored to the moments players naturally focus on.
+        </p>
+      </div>
+
+      <div class="feature-grid reveal">
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">Opening</div>
+          <h3>Intro</h3>
+          <p>Opening match presentation + match identity.</p>
+        </article>
+
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">Persistent</div>
+          <h3>Scoreboard</h3>
+          <p>Always visible match context during play.</p>
+        </article>
+
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">Peak</div>
+          <h3>Replays</h3>
+          <p>Goal + highlight replays when attention spikes.</p>
+        </article>
+
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">Flow</div>
+          <h3>Match Flow Moments</h3>
+          <p>Transitions, stoppages, and broadcast beats.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Always-On -->
+  <section class="section sponsors-section" id="always-on">
+    <div class="section-inner">
+      <div class="sponsors-section__header reveal">
+        <h2 class="section-title">Always-On Placements</h2>
+        <p class="section-intro">
+          Brand-safe placements designed for persistence and repeat exposure across sessions.
+        </p>
+      </div>
+
+      <div class="feature-grid reveal">
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">In-World</div>
+          <h3>Stadium</h3>
+          <p>Native to the match environment — feels real, not forced.</p>
+        </article>
+
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">Selective</div>
+          <h3>UI Moments</h3>
+          <p>Non-disruptive UI beats where it makes sense.</p>
+        </article>
+
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">Repeat</div>
+          <h3>Session Frequency</h3>
+          <p>Visibility compounds across matches and sessions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: Broadcast Moments -->
+  <section class="section sponsors-section" id="broadcast-moments">
+    <div class="section-inner">
+      <div class="sponsors-section__header reveal">
+        <h2 class="section-title">Broadcast Moments</h2>
+        <p class="section-intro">
+          High-attention moments with strong recall — built into the match narrative.
+        </p>
+      </div>
+
+      <div class="feature-grid reveal">
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">Pre-Match</div>
+          <h3>Walkouts</h3>
+          <p>Staging moments where players lock in.</p>
+        </article>
+
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">Setup</div>
+          <h3>Lineups</h3>
+          <p>Team reveal + match setup moments.</p>
+        </article>
+
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">Break</div>
+          <h3>Halftime</h3>
+          <p>A natural pause with clean visibility.</p>
+        </article>
+
+        <article class="feature-card sponsors-card">
+          <div class="sponsors-card__tag">End-Cap</div>
+          <h3>Player of the Match</h3>
+          <p>Celebratory moment with premium association.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Measurement: compact credibility panel -->
+  <section class="section sponsors-section sponsors-measurement">
+    <div class="section-inner">
+      <div class="sponsors-measurement__panel reveal">
+        <div class="sponsors-measurement__left">
+          <h2 class="section-title">Measurement &amp; Reporting</h2>
+          <p class="section-intro">
+            Built for buyers: impressions are defined by viewable, rendered placements — with time thresholds where relevant.
+          </p>
+        </div>
+
+        <div class="sponsors-measurement__right">
+          <ul class="sponsors-checklist">
+            <li><span class="sponsors-check"></span> Branding is rendered within the visible game viewport</li>
+            <li><span class="sponsors-check"></span> Branding is viewable (not fully obscured)</li>
+            <li><span class="sponsors-check"></span> Supports exposure-time thresholds where relevant</li>
+            <li><span class="sponsors-check"></span> Logged during gameplay, replays, menus, and defined branded moments</li>
+          </ul>
+
+          <div class="sponsors-measurement__cta">
+            <a class="sponsors-btn sponsors-btn--primary" href="contact.html">
+              <span class="sponsors-btn__small">Next step</span>
+              <span class="sponsors-btn__big">Request a plan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Shared footer -->
+<footer class="site-footer" id="footer-include"></footer>
+
+<script>
+  // Load shared footer include
+  (async function loadFooter() {
+    const footer = document.getElementById("footer-include");
+    if (!footer) return;
+    try {
+      const response = await fetch("includes/footer.html");
+      const html = await response.text();
+      footer.innerHTML = html;
+    } catch (e) {
+      console.error("Footer failed to load:", e);
+    }
+  })();
+
+  // Mobile nav toggle (fallback; your main.js may already handle this)
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".main-nav");
+    if (toggle && nav) toggle.addEventListener("click", () => nav.classList.toggle("open"));
+  });
+
+  // Subtle reveal on scroll (motion-friendly, not flashy)
+  (function () {
+    const els = Array.from(document.querySelectorAll(".reveal"));
+    if (!("IntersectionObserver" in window) || !els.length) return;
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("reveal--in");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach(el => io.observe(el));
+  })();
+</script>
 
 </body>
 </html>
