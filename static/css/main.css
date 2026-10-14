@@ -1178,11 +1178,20 @@ a.contact-channel:hover b .icon { transform: translateX(4px); }
   -webkit-mask: linear-gradient(180deg, #000, transparent 70%); mask: linear-gradient(180deg, #000, transparent 70%); }
 .page-home .updates .kicker { color: #071a1a; }
 
-/* Merch: black with bold pink diagonal stripes */
-.page-home .merch { background: #09090b; }
-.page-home .merch::before { background: repeating-linear-gradient(-55deg, transparent 0 46px, rgba(255, 0, 85, .9) 46px 58px, transparent 58px 104px);
-  -webkit-mask: linear-gradient(90deg, transparent 35%, #000 80%); mask: linear-gradient(90deg, transparent 35%, #000 80%); }
-[dir="rtl"] .page-home .merch::before { -webkit-mask: linear-gradient(-90deg, transparent 35%, #000 80%); mask: linear-gradient(-90deg, transparent 35%, #000 80%); }
+/* Merch: neon players' tunnel around the products */
+.page-home .merch { background: #0b0614; padding-block: clamp(36px, 4.5vw, 64px); }
+.page-home .merch .merch-card { padding-block: clamp(16px, 2vw, 28px); }
+.page-home .merch::before { background: repeating-radial-gradient(ellipse 60% 75% at 74% 55%, transparent 0 38px, rgba(255, 0, 85, .55) 38px 40px, transparent 40px 78px, rgba(140, 70, 255, .4) 78px 80px);
+  -webkit-mask: radial-gradient(ellipse 70% 90% at 74% 55%, #000 30%, transparent 80%); mask: radial-gradient(ellipse 70% 90% at 74% 55%, #000 30%, transparent 80%); }
+.page-home .merch::after { background: radial-gradient(30% 45% at 74% 55%, rgba(255, 0, 85, .35), transparent 70%); }
+[dir="rtl"] .page-home .merch::before { background: repeating-radial-gradient(ellipse 60% 75% at 26% 55%, transparent 0 38px, rgba(255, 0, 85, .55) 38px 40px, transparent 40px 78px, rgba(140, 70, 255, .4) 78px 80px);
+  -webkit-mask: radial-gradient(ellipse 70% 90% at 26% 55%, #000 30%, transparent 80%); mask: radial-gradient(ellipse 70% 90% at 26% 55%, #000 30%, transparent 80%); }
+[dir="rtl"] .page-home .merch::after { background: radial-gradient(30% 45% at 26% 55%, rgba(255, 0, 85, .35), transparent 70%); }
+@media (max-width: 900px) {
+  .page-home .merch::before { background: repeating-radial-gradient(ellipse 90% 60% at 50% 28%, transparent 0 30px, rgba(255, 0, 85, .5) 30px 32px, transparent 32px 62px, rgba(140, 70, 255, .35) 62px 64px);
+    -webkit-mask: radial-gradient(ellipse 90% 60% at 50% 28%, #000 25%, transparent 75%); mask: radial-gradient(ellipse 90% 60% at 50% 28%, #000 25%, transparent 75%); }
+  .page-home .merch::after { background: radial-gradient(50% 30% at 50% 28%, rgba(255, 0, 85, .35), transparent 70%); }
+}
 .page-home .merch .merch-card { background: transparent; border: 0; }
 
 /* FAQ: white band */
