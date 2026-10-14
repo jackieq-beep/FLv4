@@ -3,7 +3,7 @@ title: Improved set pieces
 section: updates
 image: set-pieces.jpg
 summary: More challenging, more realistic free kicks and rebalanced penalties.
-order: 3
+date: 2026-03-05
 ---
 
 We've reworked set pieces to make every dead ball count.

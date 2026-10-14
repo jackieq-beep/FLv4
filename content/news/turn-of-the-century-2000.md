@@ -2,7 +2,6 @@
 title: "Turn of the Century: relive the 2000 world club crown run"
 section: events
 date: 2026-10-14
-order: 0
 image: turn-of-the-century.jpg
 summary: "The first world club crown of the new millennium is on the line, and the hosts from São Paulo are on your side."
 ---

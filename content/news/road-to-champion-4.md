@@ -3,7 +3,7 @@ title: Road to Champion Challenge 4.0 is live
 section: events
 image: road-to-champion.jpg
 summary: Relive the 2018 championship journey of the French team and claim exclusive rewards.
-order: 2
+date: 2026-06-18
 ---
 
 Road to Champion Challenge 4.0 has arrived.
