@@ -34,7 +34,7 @@
     </div>
     <ul class="hero-stats" role="list">
       {% for s in t.hero.stats %}
-      <li><b>{{ s.value }}</b><span>{{ s.label }}</span></li>
+      <li><b>{{ s.value }}{% if s.star %}<svg class="hero-star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg>{% endif %}</b><span>{{ s.label }}</span></li>
       {% endfor %}
       <li class="hero-rating"><img src="{{ site.base }}/brand/esrb-e.png" alt="ESRB rating: E for Everyone" width="86" height="120"></li>
     </ul>
@@ -58,7 +58,7 @@
       <p class="lead">{{ t.engine.intro }}</p>
     </div>
     <figure class="feature-shot">
-      {{ img('match-engine.webp', t.alts.engine, '(min-width: 1240px) 1200px, 100vw') }}
+      {{ img('match-eng-esp.jpg', t.alts.engine, '(min-width: 1240px) 1200px, 100vw') }}
       <figcaption><span class="tag-dot"></span>{{ t.engine.caption }}</figcaption>
     </figure>
     <ol class="points" role="list">
@@ -116,7 +116,7 @@
     </div>
     <ul class="news-grid" role="list">
       {# Skip posts whose picture is already shown elsewhere on this page #}
-      {% set used = ['license-mancity.jpg', 'u27-goal.jpg', 'u27-main-menu.jpg', 'match-engine.webp'] + (site.hero_slides | map(attribute='img') | list) %}
+      {% set used = ['license-mancity.jpg', 'u27-goal.jpg', 'u27-main-menu.jpg', 'match-eng-esp.jpg', 'champions.jpg'] + (site.hero_slides | map(attribute='img') | list) %}
       {% for post in (news | rejectattr('image', 'in', used) | list)[:3] %}
       {{ news_card(post, t, url, img, icon) }}
       {% endfor %}

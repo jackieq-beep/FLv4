@@ -31,8 +31,9 @@ hero:
   cta_trailer: ゲームを見る
   cta_explore: ゲームを見る
   stats:
-    - { value: "1億+", label: "プレイヤー" }
-    - { value: "1,500+", label: "チーム" }
+    - { value: "1億+", label: "ダウンロード" }
+    - { value: "200+", label: "の国と地域" }
+    - { value: "4.7", label: "アプリ評価", star: true }
     - { value: "16", label: "実況言語" }
 
 ticker:
@@ -60,7 +61,7 @@ modes:
   title_2: すべての舞台で。
   items:
     - { img: u27-career.jpg, title: "チームキャリア", text: "移籍、財務、フロントの目標、そしてリーグ戦のフルシーズン。クラブ運営はあなた次第。" }
-    - { img: cups.jpg, title: "リーグ & カップ戦", text: "世界中のリーグやカップ戦で勝ち抜こう。" }
+    - { img: champions.jpg, title: "リーグ & カップ戦", text: "世界中のリーグやカップ戦で勝ち抜こう。" }
     - { img: u27-friendly.jpg, title: "フレンドリーマッチ", text: "好きな2クラブを選び、ユニフォームとスタジアムを決めたらキックオフ。" }
     - { img: u27-penalty.jpg, title: "チャレンジ & 報酬", text: "スキルチャレンジで目標を達成して、ジェムとコインをゲットしよう。" }
 

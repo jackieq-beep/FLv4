@@ -139,6 +139,7 @@ languages:
 hero_slides:
   - { img: hero.png, position: "70% 30%", mobile: "64% 20%" }
   - { img: u27-gameplay.jpg, position: "60% 50%", mobile: "55% 50%" }
+  - { img: free-kick.jpg, position: "60% 55%", mobile: "62% 55%" }
   - { img: u27-stadium.jpg, position: "50% 40%", mobile: "50% 40%" }
 
 # Pages that exist but are not in the main menu (linked from the footer).

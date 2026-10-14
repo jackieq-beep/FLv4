@@ -31,9 +31,10 @@ hero:
   cta_trailer: "Découvrir le jeu"
   cta_explore: "Découvrir le jeu"
   stats:
-    - { value: "100M+", label: "joueurs" }
-    - { value: "1 500+", label: "équipes" }
-    - { value: "16", label: "langues de commentaire" }
+    - { value: "100M+", label: "Téléchargements" }
+    - { value: "200+", label: "Pays" }
+    - { value: "4,7", label: "Note de l'appli", star: true }
+    - { value: "16", label: "Langues de commentaire" }
 
 ticker:
   - "Football League 2027 · Bientôt disponible"
@@ -60,7 +61,7 @@ modes:
   title_2: "Chaque scène."
   items:
     - { img: u27-career.jpg, title: "Carrière Club", text: "Dirige le club : transferts, finances, objectifs de la direction et une saison de championnat complète." }
-    - { img: cups.jpg, title: "Championnats & coupes", text: "Affronte des championnats et des coupes du monde entier." }
+    - { img: champions.jpg, title: "Championnats & coupes", text: "Affronte des championnats et des coupes du monde entier." }
     - { img: u27-friendly.jpg, title: "Matchs amicaux", text: "Choisis deux clubs, les maillots et le stade, et c'est parti." }
     - { img: u27-penalty.jpg, title: "Défis & récompenses", text: "Atteins les objectifs des défis techniques pour gagner des gemmes et des pièces." }
 

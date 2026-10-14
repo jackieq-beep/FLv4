@@ -31,9 +31,10 @@ hero:
   cta_trailer: "Lihat gamenya"
   cta_explore: "Lihat gamenya"
   stats:
-    - { value: "100 Jt+", label: "pemain" }
-    - { value: "1.500+", label: "tim" }
-    - { value: "16", label: "bahasa komentar" }
+    - { value: "100 Jt+", label: "Unduhan" }
+    - { value: "200+", label: "Negara" }
+    - { value: "4,7", label: "Rating Aplikasi", star: true }
+    - { value: "16", label: "Bahasa Komentar" }
 
 ticker:
   - "Football League 2027 · Segera hadir"
@@ -60,7 +61,7 @@ modes:
   title_2: "Setiap panggung."
   items:
     - { img: u27-career.jpg, title: "Karier Tim", text: "Kelola klub: transfer, keuangan, target direksi, dan satu musim liga penuh." }
-    - { img: cups.jpg, title: "Liga & Piala", text: "Bertanding di liga dan piala dari seluruh dunia." }
+    - { img: champions.jpg, title: "Liga & Piala", text: "Bertanding di liga dan piala dari seluruh dunia." }
     - { img: u27-friendly.jpg, title: "Laga Persahabatan", text: "Pilih dua klub mana saja, tentukan jersey dan stadion, lalu kick-off." }
     - { img: u27-penalty.jpg, title: "Tantangan & Hadiah", text: "Capai target di tantangan skill untuk memenangkan permata dan koin." }
 

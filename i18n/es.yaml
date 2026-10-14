@@ -31,9 +31,10 @@ hero:
   cta_trailer: Descubre el juego
   cta_explore: Descubre el juego
   stats:
-    - { value: "100M+", label: "jugadores" }
-    - { value: "1.500+", label: "equipos" }
-    - { value: "16", label: "idiomas de narración" }
+    - { value: "100M+", label: "Descargas" }
+    - { value: "200+", label: "Países" }
+    - { value: "4.7", label: "Valoración", star: true }
+    - { value: "16", label: "Idiomas de narración" }
 
 ticker:
   - Football League 2027 · Muy pronto
@@ -60,7 +61,7 @@ modes:
   title_2: Cada escenario.
   items:
     - { img: u27-career.jpg, title: "Carrera de equipo", text: "Dirige el club: fichajes, finanzas, objetivos de la directiva y una temporada de liga completa." }
-    - { img: cups.jpg, title: "Ligas y copas", text: "Compite en ligas y copas de todo el mundo." }
+    - { img: champions.jpg, title: "Ligas y copas", text: "Compite en ligas y copas de todo el mundo." }
     - { img: u27-friendly.jpg, title: "Amistosos", text: "Elige dos clubes cualesquiera, las equipaciones y el estadio, y a jugar." }
     - { img: u27-penalty.jpg, title: "Desafíos y premios", text: "Cumple los objetivos de los desafíos de habilidad y gana gemas y monedas." }
 

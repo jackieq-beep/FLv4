@@ -31,9 +31,10 @@ hero:
   cta_trailer: "了解游戏"
   cta_explore: "了解游戏"
   stats:
-    - { value: "1亿+", label: "玩家" }
-    - { value: "1,500+", label: "支球队" }
-    - { value: "16", label: "种解说语言" }
+    - { value: "1亿+", label: "下载量" }
+    - { value: "200+", label: "国家和地区" }
+    - { value: "4.7", label: "应用评分", star: true }
+    - { value: "16", label: "解说语言" }
 
 ticker:
   - "Football League 2027 · 即将登场"
@@ -60,7 +61,7 @@ modes:
   title_2: "每一个舞台。"
   items:
     - { img: u27-career.jpg, title: "球队生涯", text: "执掌俱乐部：转会、财务、董事会目标，外加完整的联赛赛季。" }
-    - { img: cups.jpg, title: "联赛与杯赛", text: "征战来自世界各地的联赛和杯赛。" }
+    - { img: champions.jpg, title: "联赛与杯赛", text: "征战来自世界各地的联赛和杯赛。" }
     - { img: u27-friendly.jpg, title: "友谊赛", text: "任选两支球队，挑好球衣和球场，即刻开球。" }
     - { img: u27-penalty.jpg, title: "挑战与奖励", text: "完成技巧挑战目标，赢取宝石和金币。" }
 
