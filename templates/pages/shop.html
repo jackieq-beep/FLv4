@@ -6,8 +6,7 @@
   <div class="shop-hero-bg">{{ img('u27-stadium.jpg', '', '100vw', eager=True) }}</div>
   <div class="container shop-hero-inner">
     <div>
-      <p class="kicker">{{ t.shop.kicker }}</p>
-      <h1 class="display display-xl">{{ t.shop.title_1 }} <span class="accent-pink">{{ t.shop.title_2 }}</span></h1>
+            <h1 class="display display-xl"><span class="kicker h1-kicker">{{ site.brand }} · {{ t.shop.kicker }}</span>{{ t.shop.title_1 }} <span class="accent-pink">{{ t.shop.title_2 }}</span></h1>
       <p class="lead">{{ t.shop.text }}</p>
     </div>
     <ul class="shop-perks" role="list">
@@ -30,7 +29,7 @@
             {% set q = 'backgroundColor=' ~ site.shop_photo_bg ~ ('&appearanceId=' ~ pr.color if pr.color else '') %}
             <img class="cat-product" src="{{ pr.img }}?width=700&height=700&{{ q }}"
                  srcset="{{ pr.img }}?width=400&height=400&{{ q }} 400w, {{ pr.img }}?width=700&height=700&{{ q }} 700w, {{ pr.img }}?width=1000&height=1000&{{ q }} 1000w"
-                 sizes="(min-width: 900px) 320px, 50vw" width="700" height="700" alt="" loading="lazy" decoding="async"
+                 sizes="(min-width: 900px) 320px, 50vw" width="700" height="700" alt="{{ t.alts.product | replace('{cat}', t.shop.categories[c.key]) }}" loading="lazy" decoding="async"
                  onerror="this.style.visibility='hidden'">
             {% endfor %}
           </span>

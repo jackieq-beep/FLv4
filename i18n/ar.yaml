@@ -2,7 +2,7 @@
 
 meta:
   home_title: "Football League – لعبة كرة القدم المجانية على الجوال | iOS و Android"
-  home_description: "Football League لعبة كرة قدم مجانية على الجوال لأجهزة iPhone و Android. كوّن تشكيلتك، والعب وضع المسيرة مع مانشستر سيتي الرسمي، أونلاين أو بدون إنترنت. Football League 2027 قادمة قريبًا."
+  home_description: "Football League لعبة كرة قدم مجانية على الجوال لأجهزة iPhone و Android. كوّن تشكيلتك والعب وضع المسيرة. Football League 2027 قادمة قريبًا."
 
 nav:
   home: "الرئيسية"
@@ -113,7 +113,7 @@ footer:
   disclaimer: "أسماء الأندية وشعاراتها وأطقمها علامات تجارية مملوكة لأصحابها وتُستخدم بموجب ترخيص."
 
 shop:
-  meta_title: "المتجر الرسمي – منتجات Football League"
+  meta_title: "متجر Football League الرسمي – قمصان وهوديز ومنتجات"
   meta_description: "قمصان كرة القدم الرسمية من Football League، وهوديز وجاكيتات وملابس أطفال وإكسسوارات. تُصنع حسب الطلب وتُشحن إلى جميع أنحاء العالم."
   kicker: "المنتجات الرسمية"
   title_1: "ارتدِ"
@@ -179,7 +179,7 @@ cookies:
 
 game_page:
   meta_title: "Football League 2027 (FL27) – ما الجديد في لعبة كرة القدم على الجوال"
-  meta_description: "تقدّم FL27 واجهة وشاشة رئيسية متجددة، وصفحة جديدة لوضع المسيرة، ورسومات مباريات محدّثة، وملعبًا جديدًا، وتحديات يومية جديدة. مجانًا على iOS و Android."
+  meta_description: "Football League 2027 (FL27): واجهة متجددة، وصفحة جديدة لوضع المسيرة، ورسومات مباريات محدّثة، وملعب جديد، وتحديات يومية."
   kicker: "ما الجديد هذا الموسم"
   title_1: "الموسم الجديد"
   title_2: "يبدأ هنا."
@@ -216,7 +216,7 @@ game_page:
   cta_text: "Football League مجانية على iOS و Android."
 
 contact_page:
-  meta_title: "تواصل معنا – Football League"
+  meta_title: "تواصل مع Football League – دعم اللاعبين والشراكات"
   meta_description: "تواصل مع فريق Football League للشراكات أو دعم اللاعبين أو الاستفسارات الصحفية."
   kicker: "تواصل معنا"
   title_1: "ابقَ"
@@ -234,7 +234,7 @@ contact_page:
   email_cta: "أرسل بريدًا إلكترونيًا"
 
 news:
-  meta_title: "الأخبار والتحديثات – Football League"
+  meta_title: "أخبار Football League والتحديثات"
   meta_description: "تحديثات لعبة Football League والفعاليات المباشرة وتراخيص الأندية الجديدة وإعلانات لعبة كرة القدم على الجوال."
   kicker: "الأخبار والتحديثات"
   title_1: "آخر الأخبار"
@@ -273,6 +273,10 @@ faq:
       a: "Football League من تطوير ونشر Mobile Soccer، وهو استوديو مستقل لألعاب الجوال يصنع ألعاب كرة قدم مجانية للاعبين في كل مكان."
 
 alts:
+  product: "{cat} من Football League"
+  bottle: "زجاجة مياه Football League"
+  hoodie: "هودي Football League"
+  hero: "Football League 2027 لعبة كرة قدم على الجوال"
   slides: "صور من اللعبة"
   engine: "أسلوب اللعب في محرك مباريات Football League مع أزرار التحكم على الشاشة"
   goal: "هالاند يسجل لمانشستر سيتي في Football League"
@@ -303,8 +307,8 @@ newsletter:
   sending: "جارٍ الإرسال…"
 
 media_page:
-  meta_title: "الإعلام والصحافة – Football League"
-  meta_description: "الملف الصحفي للعبة Football League: معلومات اللعبة والشعارات الرسمية ولقطات الشاشة وجهة الاتصال الصحفي. يمكن للعلامات التجارية الإعلان داخل اللعبة مع Mobile Soccer Media."
+  meta_title: "Football League – الملف الصحفي والإعلام"
+  meta_description: "الملف الصحفي لـ Football League: معلومات اللعبة والشعارات الرسمية ولقطات الشاشة وجهة الاتصال الصحفي، والإعلان داخل اللعبة مع Mobile Soccer Media."
   kicker: "الإعلام"
   title_1: "الصحافة"
   title_2: "والشركاء."

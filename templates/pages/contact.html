@@ -5,8 +5,7 @@
 {% set cards = {} %}{% for c in t.contact_page.cards %}{% set _ = cards.update({c.key: c}) %}{% endfor %}
 <section class="contact-bands">
   <div class="container contact-bands-head">
-    <p class="kicker">{{ t.contact_page.kicker }}</p>
-    <h1>{{ t.contact_page.who }}</h1>
+        <h1><span class="kicker h1-kicker">{{ site.brand }} · {{ t.contact_page.kicker }}</span>{{ t.contact_page.who }}</h1>
   </div>
   {% for key, em in [('support', site.support_email), ('partnerships', site.contact_email)] %}
   <a class="contact-band is-{{ key }}" href="mailto:{{ em }}">

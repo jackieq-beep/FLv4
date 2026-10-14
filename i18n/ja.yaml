@@ -113,7 +113,7 @@ footer:
   disclaimer: "クラブ名、ロゴ、ユニフォームは各所有者の商標であり、ライセンスに基づいて使用しています。"
 
 shop:
-  meta_title: "公式ショップ – Football League グッズ"
+  meta_title: "Football League 公式ショップ – Tシャツ・パーカー・グッズ"
   meta_description: "Football League公式のサッカーシャツ、パーカー、ジャケット、キッズウェア、アクセサリー。受注生産で世界中へお届けします。"
   kicker: "公式グッズ"
   title_1: ゲームを
@@ -179,7 +179,7 @@ cookies:
 
 game_page:
   meta_title: "Football League 2027 (FL27) – モバイルサッカーゲームの新要素"
-  meta_description: "FL27では、UIとホーム画面を一新。キャリアモードの新ページ、試合ビジュアルのアップデート、新スタジアム、新しいデイリーチャレンジが登場。iOS・Androidで無料。"
+  meta_description: "Football League 2027（FL27）：UIとホーム画面を一新、キャリアモードの新ページ、試合ビジュアルのアップデート、新スタジアム、デイリーチャレンジ。"
   kicker: "今シーズンの新要素"
   title_1: 新シーズンは
   title_2: ここから始まる。
@@ -216,7 +216,7 @@ game_page:
   cta_text: "Football LeagueはiOSとAndroidで無料でプレイできます。"
 
 contact_page:
-  meta_title: "お問い合わせ – Football League"
+  meta_title: "Football League お問い合わせ – サポート・提携"
   meta_description: "提携、プレイヤーサポート、報道関係のお問い合わせはFootball Leagueチームまで。"
   kicker: "お問い合わせ"
   title_1: お気軽に
@@ -234,7 +234,7 @@ contact_page:
   email_cta: メールを送る
 
 news:
-  meta_title: "ニュース & アップデート – Football League"
+  meta_title: "Football League ニュース・アップデート"
   meta_description: "モバイルサッカーゲームFootball Leagueのアップデート、ライブイベント、新クラブライセンス、お知らせ。"
   kicker: "ニュース & アップデート"
   title_1: ピッチから
@@ -273,6 +273,10 @@ faq:
       a: "Football Leagueは、世界中のプレイヤーに向けて無料のサッカーゲームを作るインディーモバイルゲームスタジオ、Mobile Soccerが開発・配信しています。"
 
 alts:
+  product: "Football League {cat}"
+  bottle: "Football League ボトル"
+  hoodie: "Football League パーカー"
+  hero: "Football League 2027 モバイルサッカーゲーム"
   slides: ゲーム画像
   engine: "画面上の操作ボタンとFootball Leagueの試合エンジンによるゲームプレイ"
   goal: "Football Leagueでマンチェスター・シティのハーランドがゴール"
@@ -303,7 +307,7 @@ newsletter:
   sending: "送信中…"
 
 media_page:
-  meta_title: "メディア・プレス – Football League"
+  meta_title: "Football League プレスキット・メディア"
   meta_description: "Football League のプレスキット：ゲーム概要、公式ロゴ、スクリーンショット、プレス窓口。Mobile Soccer Media でゲーム内広告も出稿できます。"
   kicker: "メディア"
   title_1: "プレス＆"

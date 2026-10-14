@@ -1258,3 +1258,11 @@ a.contact-band:hover .contact-pill .icon { transform: translateX(4px); }
     -webkit-mask-image: linear-gradient(-90deg, transparent 0%, transparent 40%, #000 66%); mask-image: linear-gradient(-90deg, transparent 0%, transparent 40%, #000 66%); }
 }
 [dir="rtl"] .hero-slide.is-contain.is-active { animation-name: hero-zoom; }
+
+/* SEO headings: kicker inside the H1 keeps the old look */
+h1 .h1-kicker { display: flex; font-family: var(--font-body); font-weight: 500; font-style: normal; font-size: 12px; line-height: 1.4;
+  letter-spacing: .22em; text-transform: uppercase; margin-bottom: 18px; }
+.contact-bands-head h1 .h1-kicker { margin-bottom: 10px; }
+:lang(ar) h1 .h1-kicker { letter-spacing: 0; }
+:lang(ja) h1 .h1-kicker, :lang(zh-cn) h1 .h1-kicker { letter-spacing: .08em; }
+h1.hero-lockup { margin-top: 0; font: inherit; }

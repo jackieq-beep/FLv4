@@ -113,7 +113,7 @@ footer:
   disclaimer: "俱乐部名称、标志和球衣均为其各自所有者的商标，经授权使用。"
 
 shop:
-  meta_title: "官方商城 – Football League 周边商品"
+  meta_title: "Football League 官方商店 – 球衣、卫衣与周边"
   meta_description: "Football League 官方足球衫、卫衣、夹克、童装和配饰。按需定制，全球配送。"
   kicker: "官方周边"
   title_1: "穿上"
@@ -179,7 +179,7 @@ cookies:
 
 game_page:
   meta_title: "Football League 2027 (FL27) – 手机足球游戏全新内容"
-  meta_description: "FL27 带来焕新界面与主界面、全新生涯模式页面、升级的比赛画面、全新球场和新的每日挑战。iOS 和 Android 免费畅玩。"
+  meta_description: "Football League 2027（FL27）：焕新界面与主界面、全新生涯模式页面、升级的比赛画面、全新球场和每日挑战。"
   kicker: "本赛季新内容"
   title_1: "新赛季"
   title_2: "从这里开始。"
@@ -216,7 +216,7 @@ game_page:
   cta_text: "Football League 在 iOS 和 Android 上免费畅玩。"
 
 contact_page:
-  meta_title: "联系我们 – Football League"
+  meta_title: "联系 Football League – 玩家支持与商务合作"
   meta_description: "联系 Football League 团队，洽谈合作、获取玩家支持或媒体咨询。"
   kicker: "联系"
   title_1: "联系"
@@ -234,7 +234,7 @@ contact_page:
   email_cta: "发送邮件"
 
 news:
-  meta_title: "新闻与更新 – Football League"
+  meta_title: "Football League 新闻与更新"
   meta_description: "Football League 手机足球游戏的版本更新、实时活动、新俱乐部授权及官方公告。"
   kicker: "新闻与更新"
   title_1: "来自球场的"
@@ -273,6 +273,10 @@ faq:
       a: "Football League 由 Mobile Soccer 开发并发行，这是一家独立手游工作室，致力于为全球玩家打造免费足球游戏。"
 
 alts:
+  product: "Football League {cat}"
+  bottle: "Football League 水杯"
+  hoodie: "Football League 卫衣"
+  hero: "Football League 2027 手机足球游戏"
   slides: "游戏截图"
   engine: "Football League 比赛引擎实机画面，带屏幕操控按钮"
   goal: "Haaland 在 Football League 中为 Manchester City 破门"
@@ -303,7 +307,7 @@ newsletter:
   sending: "提交中…"
 
 media_page:
-  meta_title: "媒体与新闻 – Football League"
+  meta_title: "Football League 媒体资料与新闻"
   meta_description: "Football League 新闻资料包：游戏信息、官方标志、截图与媒体联系方式。品牌可通过 Mobile Soccer Media 在游戏中投放广告。"
   kicker: "媒体"
   title_1: "媒体与"

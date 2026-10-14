@@ -5,8 +5,7 @@
 <section class="page-hero">
   <div class="page-hero-bg">{{ img('stadiums.webp', '', '100vw', eager=True) }}</div>
   <div class="container">
-    <p class="kicker">{{ t.media_page.kicker }}</p>
-    <h1 class="display display-xl">{{ t.media_page.title_1 }} <span class="accent-pink">{{ t.media_page.title_2 }}</span></h1>
+        <h1 class="display display-xl"><span class="kicker h1-kicker">{{ site.brand }} · {{ t.media_page.kicker }}</span>{{ t.media_page.title_1 }} <span class="accent-pink">{{ t.media_page.title_2 }}</span></h1>
     <p class="lead">{{ t.media_page.text }}</p>
   </div>
 </section>

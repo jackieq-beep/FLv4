@@ -2,7 +2,7 @@
 
 meta:
   home_title: "Football League – Juego de fútbol gratis para móvil | iOS y Android"
-  home_description: "Football League es un juego de fútbol gratis para iPhone y Android. Crea tu plantilla, juega el Modo Carrera y con el Manchester City oficial, online o sin conexión. Football League 2027 llega muy pronto."
+  home_description: "Football League es un juego de fútbol gratis para iPhone y Android. Crea tu plantilla y juega el Modo Carrera. Football League 2027 llega muy pronto."
 
 nav:
   home: Inicio
@@ -113,7 +113,7 @@ footer:
   disclaimer: "Los nombres, logotipos y equipaciones de los clubes son marcas registradas de sus respectivos propietarios y se usan bajo licencia."
 
 shop:
-  meta_title: "Tienda oficial – Merchandising de Football League"
+  meta_title: "Tienda oficial de Football League – Camisetas, sudaderas y más"
   meta_description: "Camisetas de fútbol, sudaderas, chaquetas, ropa infantil y accesorios oficiales de Football League. Fabricados bajo pedido y con envío a todo el mundo."
   kicker: "Merchandising oficial"
   title_1: Viste
@@ -179,7 +179,7 @@ cookies:
 
 game_page:
   meta_title: "Football League 2027 (FL27) – Novedades del juego de fútbol para móvil"
-  meta_description: "FL27 trae una interfaz y pantalla de inicio renovadas, una nueva página del Modo Carrera, gráficos de partido actualizados, un estadio nuevo y nuevos desafíos diarios. Gratis en iOS y Android."
+  meta_description: "Football League 2027 (FL27): interfaz renovada, nueva página del Modo Carrera, gráficos de partido mejorados, estadio nuevo y desafíos diarios."
   kicker: "Novedades de esta temporada"
   title_1: La nueva temporada
   title_2: empieza aquí.
@@ -216,7 +216,7 @@ game_page:
   cta_text: "Football League es gratis en iOS y Android."
 
 contact_page:
-  meta_title: "Contacto – Football League"
+  meta_title: "Contacto de Football League – Soporte y colaboraciones"
   meta_description: "Ponte en contacto con el equipo de Football League para colaboraciones, soporte al jugador o prensa."
   kicker: "Contacto"
   title_1: Ponte en
@@ -234,7 +234,7 @@ contact_page:
   email_cta: Enviar un correo
 
 news:
-  meta_title: "Noticias y novedades – Football League"
+  meta_title: "Noticias de Football League"
   meta_description: "Actualizaciones del juego, eventos en vivo, nuevas licencias de clubes y anuncios de Football League, el juego de fútbol para móvil."
   kicker: "Noticias y novedades"
   title_1: Lo último
@@ -273,6 +273,10 @@ faq:
       a: "Football League está desarrollado y publicado por Mobile Soccer, un estudio independiente de juegos para móvil que crea juegos de fútbol gratis para jugadores de todo el mundo."
 
 alts:
+  product: "{cat} de Football League"
+  bottle: "Botella de Football League"
+  hoodie: "Sudadera de Football League"
+  hero: "Football League 2027, juego de fútbol para móvil"
   slides: Imágenes del juego
   engine: "Jugabilidad del motor de partido de Football League con controles en pantalla"
   goal: "Haaland marca para el Manchester City en Football League"
@@ -303,8 +307,8 @@ newsletter:
   sending: "Enviando…"
 
 media_page:
-  meta_title: "Prensa y medios – Football League"
-  meta_description: "Kit de prensa de Football League: datos del juego, logos oficiales, capturas y contacto de prensa. Las marcas pueden anunciarse en el juego con Mobile Soccer Media."
+  meta_title: "Football League – Kit de prensa y medios"
+  meta_description: "Kit de prensa de Football League: datos del juego, logos oficiales, capturas y contacto de prensa. Publicidad en el juego con Mobile Soccer Media."
   kicker: "Medios"
   title_1: "Prensa y"
   title_2: "socios."

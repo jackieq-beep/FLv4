@@ -8,8 +8,7 @@
   <div class="page-hero-bg">{{ img('u27-gameplay.jpg', '', '100vw', eager=True) }}</div>
   <div class="container{% if nl_on %} hero-signup-grid{% endif %}">
     <div>
-      <p class="kicker">{{ t.news.kicker }}</p>
-      <h1 class="display display-xl">{{ t.news.title_1 }} <span class="accent-pink">{{ t.news.title_2 }}</span></h1>
+            <h1 class="display display-xl"><span class="kicker h1-kicker">{{ site.brand }} · {{ t.news.kicker }}</span>{{ t.news.title_1 }} <span class="accent-pink">{{ t.news.title_2 }}</span></h1>
       <p class="lead">{{ t.news.text }}</p>
     </div>
     {% if nl_on %}

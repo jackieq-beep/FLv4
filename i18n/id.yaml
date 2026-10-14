@@ -2,7 +2,7 @@
 
 meta:
   home_title: "Football League – Game Sepak Bola Mobile Gratis | iOS & Android"
-  home_description: "Football League adalah game sepak bola mobile gratis untuk iPhone dan Android. Bangun skuad, mainkan Mode Karier dan Manchester City resmi, online maupun offline. Football League 2027 segera hadir."
+  home_description: "Football League adalah game sepak bola mobile gratis untuk iPhone dan Android. Bangun skuad dan mainkan Mode Karier. Football League 2027 segera hadir."
 
 nav:
   home: "Beranda"
@@ -113,7 +113,7 @@ footer:
   disclaimer: "Nama, logo, dan jersey klub adalah merek dagang milik pemiliknya masing-masing dan digunakan di bawah lisensi."
 
 shop:
-  meta_title: "Toko Resmi – Merchandise Football League"
+  meta_title: "Toko Resmi Football League – Jersey, Hoodie & Merchandise"
   meta_description: "Kaus sepak bola, hoodie, jaket, pakaian anak, dan aksesori resmi Football League. Dibuat sesuai pesanan dan dikirim ke seluruh dunia."
   kicker: "Merchandise resmi"
   title_1: "Kenakan"
@@ -179,7 +179,7 @@ cookies:
 
 game_page:
   meta_title: "Football League 2027 (FL27) – Fitur Baru di Game Sepak Bola Mobile"
-  meta_description: "FL27 hadir dengan UI dan layar utama baru, halaman Mode Karier baru, visual pertandingan yang diperbarui, stadion baru, dan tantangan harian baru. Gratis di iOS dan Android."
+  meta_description: "Football League 2027 (FL27): UI baru, halaman Mode Karier baru, visual pertandingan yang diperbarui, stadion baru, dan tantangan harian."
   kicker: "Yang baru musim ini"
   title_1: "Musim baru"
   title_2: "dimulai di sini."
@@ -216,7 +216,7 @@ game_page:
   cta_text: "Football League gratis dimainkan di iOS dan Android."
 
 contact_page:
-  meta_title: "Kontak – Football League"
+  meta_title: "Hubungi Football League – Dukungan Pemain & Kemitraan"
   meta_description: "Hubungi tim Football League untuk kemitraan, dukungan pemain, atau media."
   kicker: "Kontak"
   title_1: "Hubungi"
@@ -234,7 +234,7 @@ contact_page:
   email_cta: "Kirim email"
 
 news:
-  meta_title: "Berita & Update – Football League"
+  meta_title: "Berita Football League – Update dan Event"
   meta_description: "Update game, event live, lisensi klub baru, dan pengumuman dari game sepak bola mobile Football League."
   kicker: "Berita & update"
   title_1: "Kabar terbaru"
@@ -273,6 +273,10 @@ faq:
       a: "Football League dikembangkan dan diterbitkan oleh Mobile Soccer, studio game mobile independen yang membuat game sepak bola gratis untuk pemain di mana saja."
 
 alts:
+  product: "{cat} Football League"
+  bottle: "Botol minum Football League"
+  hoodie: "Hoodie Football League"
+  hero: "Football League 2027, game sepak bola mobile"
   slides: "Gambar game"
   engine: "Gameplay mesin pertandingan Football League dengan kontrol di layar"
   goal: "Haaland mencetak gol untuk Manchester City di Football League"
@@ -303,7 +307,7 @@ newsletter:
   sending: "Mengirim…"
 
 media_page:
-  meta_title: "Media & Pers – Football League"
+  meta_title: "Football League – Press Kit & Media"
   meta_description: "Press kit Football League: info game, logo resmi, screenshot, dan kontak pers. Brand bisa beriklan di dalam game bersama Mobile Soccer Media."
   kicker: "Media"
   title_1: "Pers &"

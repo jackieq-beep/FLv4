@@ -5,7 +5,7 @@
 <section class="hero">
   <div class="hero-media" data-hero-slides>
     {% for sl in site.hero_slides %}
-    {{ img(sl.img, '', '100vw', 'hero-img hero-slide' ~ (' is-active' if loop.first else '') ~ (' is-contain' if sl.fit == 'contain' else ''), eager=loop.first, style='--pos:' ~ sl.position ~ ';--pos-m:' ~ sl.mobile) }}
+    {{ img(sl.img, t.alts.hero, '100vw', 'hero-img hero-slide' ~ (' is-active' if loop.first else '') ~ (' is-contain' if sl.fit == 'contain' else ''), eager=loop.first, style='--pos:' ~ sl.position ~ ';--pos-m:' ~ sl.mobile) }}
     {% endfor %}
   </div>
   {% if site.hero_slides | length > 1 %}
@@ -14,15 +14,15 @@
   </div>
   {% endif %}
   <div class="container hero-inner">
-    <div class="hero-lockup" data-hero-logo>
+    <h1 class="hero-lockup" data-hero-logo>
       <img class="hero-lockup-word" src="{{ site.base }}/brand/wordmark-white.png" alt="{{ t.hero.eyebrow_brand or 'Football League' }}" width="582" height="180">
       {% if site.brand_year %}<span class="hero-lockup-year" style="--year:url({{ site.base }}/brand/y{{ site.brand_year }}.png)" role="img" aria-label="{{ site.brand_year }}"></span>{% endif %}
-    </div>
+    </h1>
     <p class="hero-badge"><span class="live-dot"></span>{{ t.hero.eyebrow }}</p>
-    <h1 class="hero-title">
+    <h2 class="hero-title">
       <span>{{ t.hero.title_1 }}</span>
       <span><em>{{ t.hero.title_2a }}</em> {{ t.hero.title_2b }}</span>
-    </h1>
+    </h2>
     <p class="hero-body">{{ t.hero.body }}</p>
     <div class="hero-ctas">
       <a class="btn btn-primary btn-lg" href="#download">{{ t.hero.cta_primary }} {{ icon('arrow-right') }}</a>
@@ -137,8 +137,8 @@
     </div>
     <div class="merch-art" aria-hidden="true">
       <span class="merch-word">FL27</span>
-      {{ img('merch-hoodie.png', '', '300px', 'garment garment-hoodie') }}
-      {{ img('merch-bottle.png', '', '120px', 'garment garment-bottle') }}
+      {{ img('merch-hoodie.png', t.alts.hoodie, '300px', 'garment garment-hoodie') }}
+      {{ img('merch-bottle.png', t.alts.bottle, '120px', 'garment garment-bottle') }}
       <img class="merch-crest" src="{{ site.base }}/img/logo-mark.png" alt="" width="385" height="371" loading="lazy">
     </div>
   </div>
