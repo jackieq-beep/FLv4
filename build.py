@@ -94,8 +94,8 @@ def load_news(lang):
         meta["section"] = meta.get("section") or "announcements"
         meta["html"] = Markup(markdown.markdown(body))
         posts.append(meta)
-    # Newest first: undated posts (pinned with "order") on top, then by date
-    posts.sort(key=lambda p: (1 if p.get("date") else 0, -(p["date"].toordinal()) if p.get("date") else p.get("order", 999)))
+    # Pinned posts (with "order", lowest first) on top, then the rest newest first
+    posts.sort(key=lambda p: (0, p["order"]) if "order" in p else (1, -(p["date"].toordinal()) if p.get("date") else 0))
     return posts
 
 
