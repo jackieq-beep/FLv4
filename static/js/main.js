@@ -58,7 +58,7 @@
   if ("IntersectionObserver" in window && !reduce) {
     // Only the hero and the game description section animate; the rest of the site stays still.
     const singles = document.querySelectorAll(".engine .split-head, .engine .feature-shot");
-    const groups = document.querySelectorAll(".engine .points, .hero-stats");
+    const groups = document.querySelectorAll(".engine .points");
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); } });
     }, { rootMargin: "0px 0px -10% 0px" });

@@ -32,6 +32,8 @@ hero:
   cta_explore: Conheça o jogo
   stats:
     - { value: "100M+", label: "jogadores" }
+    - { value: "1.500+", label: "times" }
+    - { value: "16", label: "idiomas de narração" }
 
 ticker:
   - Football League 2027 · Em breve

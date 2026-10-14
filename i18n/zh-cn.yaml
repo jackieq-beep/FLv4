@@ -32,6 +32,8 @@ hero:
   cta_explore: "了解游戏"
   stats:
     - { value: "1亿+", label: "玩家" }
+    - { value: "1,500+", label: "支球队" }
+    - { value: "16", label: "种解说语言" }
 
 ticker:
   - "Football League 2027 · 即将登场"

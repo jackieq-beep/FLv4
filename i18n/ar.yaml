@@ -32,6 +32,8 @@ hero:
   cta_explore: "اكتشف اللعبة"
   stats:
     - { value: "+100 مليون", label: "لاعب" }
+    - { value: "+1,500", label: "فريق" }
+    - { value: "16", label: "لغة تعليق" }
 
 ticker:
   - "Football League 2027 · قريبًا"

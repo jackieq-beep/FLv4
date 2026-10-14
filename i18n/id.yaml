@@ -32,6 +32,8 @@ hero:
   cta_explore: "Lihat gamenya"
   stats:
     - { value: "100 Jt+", label: "pemain" }
+    - { value: "1.500+", label: "tim" }
+    - { value: "16", label: "bahasa komentar" }
 
 ticker:
   - "Football League 2027 · Segera hadir"

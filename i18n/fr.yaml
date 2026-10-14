@@ -32,6 +32,8 @@ hero:
   cta_explore: "Découvrir le jeu"
   stats:
     - { value: "100M+", label: "joueurs" }
+    - { value: "1 500+", label: "équipes" }
+    - { value: "16", label: "langues de commentaire" }
 
 ticker:
   - "Football League 2027 · Bientôt disponible"

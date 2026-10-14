@@ -32,6 +32,8 @@ hero:
   cta_explore: ゲームを見る
   stats:
     - { value: "1億+", label: "プレイヤー" }
+    - { value: "1,500+", label: "チーム" }
+    - { value: "16", label: "実況言語" }
 
 ticker:
   - Football League 2027 · まもなく登場
