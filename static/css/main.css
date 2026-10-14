@@ -1275,3 +1275,18 @@ h1 .h1-kicker { display: flex; font-family: var(--font-body); font-weight: 500; 
 :lang(ar) h1 .h1-kicker { letter-spacing: 0; }
 :lang(ja) h1 .h1-kicker, :lang(zh-cn) h1 .h1-kicker { letter-spacing: .08em; }
 h1.hero-lockup { margin-top: 0; font: inherit; }
+
+/* Game modes: 2 x 2 grid, pictures fill a wide frame */
+.page-home .mode-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.page-home .mode-card .fit { --fit-ar: 2 / 1; }
+.page-home .mode-card .fit img { object-fit: cover !important; }
+.page-home .mode-body { padding: 18px 22px 22px; }
+.page-home .mode-body h3 { font-size: 22px; }
+.page-home .mode-body p { font-size: 15px; }
+@media (max-width: 640px) {
+  .page-home .mode-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .page-home .mode-card { display: block; }
+  .page-home .mode-card .fit { width: 100%; }
+  .page-home .mode-body h3 { font-size: 18px; }
+}
+.page-home .mode-card .fit img[src*="champions"] { object-position: 50% 15%; }
