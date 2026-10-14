@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block robots %}<meta name="robots" content="noindex">{% endblock %}
+{% block title %}404 – {{ site.brand }}{% endblock %}
+{% block content %}
+<section class="coming">
+  <div class="coming-bg">{{ img('u27-stadium.jpg', '', '100vw') }}</div>
+  <div class="container coming-inner">
+    <p class="kicker">404</p>
+    <h1 class="display display-xl">{{ t.notfound.title }}</h1>
+    <p class="lead">{{ t.notfound.text }}</p>
+    <a class="btn btn-primary" href="{{ url() }}">{{ t.coming.back }} {{ icon('arrow-right') }}</a>
+  </div>
+</section>
+{% endblock %}

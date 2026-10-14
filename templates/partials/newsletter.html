@@ -1,0 +1,12 @@
+{% if site.newsletter and site.newsletter.action %}
+<section class="newsletter" aria-labelledby="nl-title">
+  <div class="container nl-grid">
+    <div class="nl-copy">
+      <p class="kicker">{{ t.newsletter.kicker }}</p>
+      <h2 class="display" id="nl-title">{{ t.newsletter.title }}</h2>
+      <p>{{ t.newsletter.text }}</p>
+    </div>
+    {% with nl_id = "nl" %}{% include "partials/newsletter_form.html" %}{% endwith %}
+  </div>
+</section>
+{% endif %}

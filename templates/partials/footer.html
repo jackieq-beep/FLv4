@@ -1,0 +1,49 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="{{ url() }}">
+        <img class="brand-logo" src="{{ site.base }}/brand/wordmark-white.png" alt="Football League" width="582" height="180" loading="lazy">
+        {% if site.brand_year %}<span class="brand-year" style="--year:url({{ site.base }}/brand/y{{ site.brand_year }}.png)" role="img" aria-label="{{ site.brand_year }}"></span>{% endif %}
+      </a>
+      <p>{{ t.footer.about }}</p>
+    </div>
+    <div class="footer-col">
+      <h2>{{ t.footer.col_game }}</h2>
+      <ul role="list">
+        <li><a href="{{ url('game/') }}">{{ t.nav.game }}</a></li>
+        <li><a href="{{ url('news/') }}">{{ t.nav.news }}</a></li>
+        <li><a href="{{ site.stores.google_play }}" target="_blank" rel="noopener">Google Play</a></li>
+        <li><a href="{{ site.stores.app_store }}" target="_blank" rel="noopener">App Store</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h2>{{ t.footer.col_company }}</h2>
+      <ul role="list">
+        <li><a href="{{ url('shop/') }}">{{ t.nav.shop }}</a></li>
+        <li><a href="{{ url('media/') }}">{{ t.nav.media }}</a></li>
+        <li><a href="{{ url('contact/') }}">{{ t.footer.contact }}</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-follow">
+      <h2>{{ t.footer.col_follow }}</h2>
+      <ul role="list">
+        {% for k in site.social_list %}
+        <li><a class="fs-{{ k }}" href="{{ site.social[k] }}" target="_blank" rel="noopener"><span class="fs-tile">{{ icon(k) }}</span><span>{{ site.social_names[k] }}</span></a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h2>{{ t.footer.col_legal }}</h2>
+      <ul role="list">
+        <li><a href="{{ url('privacy/') }}">{{ t.footer.privacy }}</a></li>
+        <li><a href="{{ url('terms/') }}">{{ t.footer.terms }}</a></li>
+        <li><a href="{{ url('cookies/') }}">{{ t.footer.cookie_policy }}</a></li>
+        <li><button class="footer-link" type="button" data-cookie-settings>{{ t.footer.cookies }}</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {{ year }} {{ site.company }}. {{ t.footer.rights }} <span class="footer-dev">{{ t.footer.developer }} <b>{{ site.company }}</b></span></p>
+    <p class="footer-note">{{ t.footer.disclaimer }}</p>
+  </div>
+</footer>

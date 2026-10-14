@@ -1,0 +1,336 @@
+# Textos do site em português (Brasil).
+
+meta:
+  home_title: "Football League – Jogo de Futebol Grátis para Celular | iOS e Android"
+  home_description: "Football League é um jogo de futebol grátis para iPhone e Android. Monte seu elenco, jogue o Modo Carreira e com o Manchester City oficial, online ou offline. Football League 2027 chega em breve."
+
+nav:
+  home: Início
+  game: Jogo
+  news: Notícias
+  shop: Loja
+  media: Mídia
+  community: Comunidade
+  contact: Contato
+  play_now: Jogar agora
+  menu: Menu
+  close: Fechar menu
+  language: Idioma
+  soon: Em breve
+  skip: Pular para o conteúdo
+
+hero:
+  eyebrow_brand: "Football League"
+  eyebrow: "Nova temporada em breve"
+  title_1: O futebol
+  title_2a: vive
+  title_2b: aqui
+  tagline: Um jogo global para todos.
+  body: "Football League é o jogo de futebol grátis para celular feito para quem ama futebol. Monte seu time dos sonhos, enfrente rivais online ou jogue offline, onde quiser."
+  cta_primary: Jogar agora
+  cta_trailer: Conheça o jogo
+  cta_explore: Conheça o jogo
+  stats:
+    - { value: "100M+", label: "jogadores" }
+
+ticker:
+  - Football League 2027 · Em breve
+  - Grátis para jogar
+  - "Nova página do Modo Carreira"
+  - Eventos ao vivo toda semana
+  - Ligas e copas
+  - Feito para dia de jogo
+
+engine:
+  kicker: "Futebol mobile de nova geração"
+  title_1: Futebol realista.
+  title_2: Profundidade tática.
+  intro: "IA inteligente, controles responsivos e animações fluidas fazem do Football League um jogo de futebol para celular que joga como o de verdade, em qualquer aparelho."
+  caption: "Imagens do jogo"
+  points:
+    - { num: "01", title: "Motor de partida dinâmico", text: "IA inteligente, controles responsivos e animações fluidas em cada partida, do primeiro toque ao apito final." }
+    - { num: "02", title: "Estilos táticos", text: "Novos estilos táticos com instruções próprias, para o seu time jogar do jeito que você pensa." }
+    - { num: "03", title: "Bolas paradas aprimoradas", text: "Cobranças de falta mais desafiadoras e realistas e pênaltis rebalanceados. Toda bola parada é uma chance." }
+
+modes:
+  kicker: "Novidades de 2027"
+  title_1: Cada partida.
+  title_2: Cada palco.
+  items:
+    - { img: u27-career.jpg, title: "Carreira de Time", text: "Comande o clube: transferências, finanças, metas da diretoria e uma temporada completa de liga." }
+    - { img: cups.jpg, title: "Ligas e copas", text: "Dispute ligas e copas do mundo todo." }
+    - { img: u27-friendly.jpg, title: "Amistosos", text: "Escolha dois clubes quaisquer, os uniformes e o estádio, e role a bola." }
+    - { img: u27-penalty.jpg, title: "Desafios e recompensas", text: "Bata as metas dos desafios de habilidade e ganhe gemas e moedas." }
+
+clubs:
+  kicker: "Licença oficial"
+  title_1: Clube oficial.
+  title_2: Cores de verdade.
+  text: "O Manchester City tem licença oficial no Football League. Uniformes autênticos, o escudo oficial, futebol de elite e a temporada inteira em azul-celeste."
+  cta: Leia o anúncio
+  badge: Licença oficial
+
+updates:
+  kicker: "Últimas atualizações"
+  title: Novidades
+  all: Todas as notícias
+  read: Leia mais
+
+merch:
+  kicker: "Produtos oficiais"
+  title_1: Vista
+  title_2: o jogo.
+  text: "Camisas, moletons e acessórios oficiais do Football League. Feitos para a arquibancada, a rua e o campo."
+  cta: Visite a loja
+
+download:
+  kicker: "Grátis no iOS e Android"
+  title_1: Junte-se a 100M+
+  title_2: jogadores.
+  text: "Baixe o Football League, o jogo de futebol grátis para iOS e Android, e deixe sua marca nesta temporada."
+  developer: "Desenvolvido pela Mobile Soccer"
+  gp_small: Disponível no
+  gp_big: Google Play
+  as_small: Baixar na
+  as_big: App Store
+
+footer:
+  about: "Football League é um jogo de futebol grátis para celular, para iOS e Android, desenvolvido e publicado pela Mobile Soccer."
+  developer: "Desenvolvido por"
+  col_game: Jogo
+  col_company: Empresa
+  col_follow: Siga a gente
+  col_legal: Jurídico
+  privacy: Política de Privacidade
+  terms: Termos de Serviço
+  cookies: Configurações de cookies
+  cookie_policy: Política de Cookies
+  contact: Fale conosco
+  rights: "Todos os direitos reservados."
+  disclaimer: "Nomes, escudos e uniformes dos clubes são marcas registradas de seus respectivos donos e são usados sob licença."
+
+shop:
+  meta_title: "Loja Oficial – Produtos Football League"
+  meta_description: "Camisas de futebol, moletons, jaquetas, roupas infantis e acessórios oficiais do Football League. Feitos sob encomenda e enviados para o mundo todo."
+  kicker: "Produtos oficiais"
+  title_1: Vista
+  title_2: o jogo.
+  text: "Camisas, moletons, jaquetas, roupas infantis e adesivos com o escudo do Football League. Feitos sob encomenda e entregues na sua porta."
+  perks:
+    - { icon: bag, text: "Feito sob encomenda" }
+    - { icon: check, text: "Pagamento seguro" }
+    - { icon: check, text: "Tamanhos adulto, infantil e bebê" }
+  categories:
+    men: Masculino
+    women: Feminino
+    kids: "Juvenil"
+    accessories: Acessórios
+  nav:
+    all: Todos os produtos
+    men: Masculino
+    women: Feminino
+    kids: "Juvenil"
+    accessories: Acessórios
+    home: "Casa e decoração"
+    stickers: Adesivos
+    sub_all: Todos
+    tshirts: Camisetas
+    hoodies: "Moletons e blusões"
+    zips: "Moletons com zíper e jaquetas"
+    longsleeve: Camisetas manga longa
+    polos: Camisas polo
+    tanks: Regatas
+    sportswear: Roupas esportivas
+    bottoms: Calças e shorts
+    kidshirts: "Camisetas infantis"
+    baby: Produtos para bebê
+    accessories_sub: Acessórios
+    caps: "Bonés e chapéus"
+    bags: "Bolsas e mochilas"
+    aprons: Aventais
+    socks: Meias
+  choose: "Compre por categoria"
+  all_products: Todos os produtos
+  stickers: Adesivos
+  back: Todas as categorias
+  basket: Carrinho
+  loading: "Carregando a loja…"
+  fallback: "A loja não carregou?"
+  fallback_link: "Abra em uma nova aba"
+
+cookies:
+  title: "Usamos cookies"
+  text: "Usamos cookies essenciais para o site funcionar. Com a sua permissão, também queremos usar cookies de análise para entender como os visitantes usam o site e melhorá-lo."
+  accept: Aceitar todos
+  reject: Só essenciais
+  settings: Configurações
+  save: Salvar escolhas
+  essential: Essenciais
+  essential_text: "Necessários para o site e a loja funcionarem e para lembrar sua escolha de cookies. Sempre ativos."
+  analytics: Análise
+  analytics_text: "Google Analytics: estatísticas anônimas, como visualizações de página, origens de tráfego e tipos de dispositivo."
+  marketing: Marketing
+  marketing_text: "Permite que parceiros de anúncios (Google) meçam campanhas e mostrem anúncios relevantes."
+  policy: Política de Cookies
+  always_on: Sempre ativos
+
+game_page:
+  meta_title: "Football League 2027 (FL27) – Novidades do Jogo de Futebol para Celular"
+  meta_description: "O FL27 traz interface e tela inicial renovadas, uma nova página do Modo Carreira, visual de partida atualizado, um estádio novo e novos desafios diários. Grátis no iOS e Android."
+  kicker: "Novidades desta temporada"
+  title_1: A nova temporada
+  title_2: começa aqui.
+  text: "O FL27 traz um visual mais limpo e moderno, Modo Carreira redesenhado, visual de partida atualizado, um estádio novo e novos desafios diários."
+  jump: "Novidades"
+  features:
+    - key: ui
+      label: "Novo visual"
+      title: "Um visual mais limpo e moderno"
+      text: "O FL27 traz uma interface renovada, com um estilo visual mais limpo e moderno. Redesenhamos a tela inicial e a apresentação dos modos para deixar a navegação mais clara e dar ao jogo um visual mais fresco e premium."
+      images: [u27-main-menu.jpg]
+    - key: career
+      label: "Modo Carreira"
+      title: "Uma nova página para o Modo Carreira"
+      text: "No FL27, redesenhamos o Modo Carreira, com uma nova página dedicada e mais melhorias de jogabilidade para o modo ficar mais completo e fácil de navegar. Assim, a progressão de longo prazo ganha mais identidade dentro do jogo."
+      images: [u27-career.jpg]
+    - key: visuals
+      label: "Dia de jogo"
+      title: "Visual de partida atualizado"
+      text: "O FL27 melhora o visual das partidas: tela de carregamento pré-jogo redesenhada, botões e elementos de interface atualizados, nova apresentação do Momento do Gol e um estádio novo. Tudo isso deixa a experiência de partida mais caprichada e visualmente consistente."
+      images: [u27-gameplay.jpg, u27-goal.jpg, u27-friendly.jpg]
+    - key: stadium
+      label: "Novo estádio"
+      title: "Um estádio com design novo"
+      text: "Como em toda edição anual, o FL27 traz um estádio com design novo, identidade visual atualizada, novos elementos de apresentação e mais clima de dia de jogo."
+      images: [u27-stadium.jpg]
+    - key: challenges
+      label: "Desafios diários"
+      title: "Novos desafios diários"
+      text: "Novos desafios diários: complete desafios curtos de futebol para ganhar recompensas e tenha mais variedade além das partidas normais e dos modos de longo prazo."
+      images: [u27-penalty.jpg]
+  cta_title_1: Pronto para
+  cta_title_2: o apito inicial?
+  cta_text: "Football League é grátis para jogar no iOS e Android."
+
+contact_page:
+  meta_title: "Contato – Football League"
+  meta_description: "Fale com a equipe do Football League sobre parcerias, suporte ao jogador ou imprensa."
+  kicker: "Contato"
+  title_1: Fale
+  title_2: conosco.
+  text: "Dúvidas, ideias ou propostas comerciais? Fale direto com a equipe certa."
+  who: "Quem está entrando em contato?"
+  bands:
+    support: ["Sou jogador", "e preciso de ajuda"]
+    partnerships: ["Sou uma marca,", "parceiro ou imprensa"]
+    community: ["Só quero", "acompanhar o jogo"]
+  cards:
+    - { key: partnerships, icon: mail, title: "Parcerias e negócios", text: "Parcerias de marca, licenciamento, publicidade e contatos de mídia." }
+    - { key: support, icon: gamepad, title: "Suporte ao jogador", text: "Ajuda com o jogo, sua conta, compras ou solicitações de privacidade." }
+    - { key: community, icon: users, title: "Comunidade", text: "Siga a gente para notícias e vídeos, ou converse com jogadores e a equipe no Discord." }
+  email_cta: Enviar e-mail
+
+news:
+  meta_title: "Notícias e Atualizações – Football League"
+  meta_description: "Atualizações, eventos ao vivo, novas licenças de clubes e anúncios do Football League, o jogo de futebol para celular."
+  kicker: "Notícias e atualizações"
+  title_1: Direto
+  title_2: do gramado.
+  text: "Atualizações do jogo, eventos ao vivo, novas licenças de clubes e anúncios."
+  all: Todas
+  sections:
+    announcements: Anúncios
+    updates: Atualizações
+    events: Eventos
+    licenses: "Clubes e licenças"
+  empty: "Ainda não há posts nesta seção."
+  back: Todas as notícias
+  related: Mais notícias
+  share: Compartilhar
+  copy_link: Copiar link
+  copied: Link copiado
+  featured: Destaque
+  # Formato da data: D = dia, M = mês, Y = ano
+  date_format: "D M Y"
+  months: [jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez]
+
+faq:
+  kicker: "Perguntas frequentes"
+  title: Suas dúvidas, respondidas.
+  items:
+    - q: "O Football League é grátis?"
+      a: "Sim. O Football League é grátis para baixar e jogar em celulares e tablets Android (Google Play) e em iPhone e iPad (App Store)."
+    - q: "Dá para jogar Football League offline?"
+      a: "Sim. Você pode jogar Football League offline, sem Wi-Fi, ou ficar online para eventos ao vivo e desafios. É um jogo de futebol para jogar em qualquer lugar."
+    - q: "Football League é um jogo de soccer ou de football?"
+      a: "Os dois! Football League é um jogo de futebol para celular. A maior parte do mundo chama o esporte de football, e nos EUA ele é chamado de soccer. Mesmo jogo, mesmo esporte apaixonante."
+    - q: "O que dá para jogar no Football League?"
+      a: "Modo Carreira, amistosos com quaisquer dois clubes, desafios diários de habilidade, eventos ao vivo e ligas e copas do mundo todo."
+    - q: "Quem faz o Football League?"
+      a: "O Football League é desenvolvido e publicado pela Mobile Soccer, um estúdio independente de jogos mobile que cria jogos de futebol grátis para jogadores do mundo todo."
+
+alts:
+  slides: Imagens do jogo
+  engine: "Jogabilidade do motor de partida do Football League com controles na tela"
+  goal: "Haaland marca para o Manchester City no Football League"
+  mancity: "Jogadores do Manchester City no Football League"
+  menu: "Menu principal do Football League com jogadores do Manchester City"
+
+notfound:
+  title: Impedimento!
+  text: "Esta página não existe."
+
+coming:
+  kicker: "Em breve"
+  text: "Esta página está sendo construída. Volte em breve."
+  back: Voltar ao início
+
+newsletter:
+  kicker: "Newsletter"
+  title: "Saiba tudo do FL27 primeiro."
+  text: "Datas de lançamento, novidades, eventos e recompensas exclusivas, direto no seu e-mail."
+  placeholder: "Seu e-mail"
+  name_placeholder: "Seu nome"
+  button: "Inscrever-se"
+  consent: "Ao se inscrever, você concorda em receber e-mails da Mobile Soccer sobre o Football League. Cancele quando quiser."
+  privacy: "Política de Privacidade"
+  success: "Pronto! Confira seu e-mail para confirmar a inscrição. Não encontrou? Confira a pasta de spam ou lixo eletrônico."
+  error: "Algo deu errado. Tente novamente."
+  invalid: "Digite um e-mail válido."
+  sending: "Enviando…"
+
+media_page:
+  meta_title: "Imprensa e mídia – Football League"
+  meta_description: "Kit de imprensa do Football League: dados do jogo, logos oficiais, capturas de tela e contato de imprensa. Marcas podem anunciar no jogo com a Mobile Soccer Media."
+  kicker: "Mídia"
+  title_1: "Imprensa e"
+  title_2: "parceiros."
+  text: "Tudo o que você precisa para escrever sobre o Football League, e como as marcas podem fazer parte do jogo."
+  logos_title: "Logos oficiais"
+  logos_text: "Use o logotipo oficial do Football League. Não estique, mude as cores nem edite."
+  logo_white: "Logo branco (PNG)"
+  logo_black: "Logo preto (PNG)"
+  shots_title: "Capturas e artes"
+  shots_text: "Imagens em alta resolução que você pode usar livremente ao falar do Football League."
+  download: "Baixar"
+  ad_kicker: "Publicidade"
+  ad_title: "Coloque sua marca no jogo."
+  ad_text: "A Mobile Soccer Media é a área de mídia da Mobile Soccer. Oferece às marcas patrocínio direto e seguro dentro do Football League: placas de LED, telões do estádio, Craque da Partida e patrocínio de eventos."
+  ad_cta: "Visitar a Mobile Soccer Media"
+  aff_kicker: "Afiliados"
+  aff_title: "Criadores e afiliados."
+  aff_text: "Você faz vídeos, lives ou conteúdo sobre o Football League? Entre no nosso programa de afiliados e cresça com a gente."
+  aff_points: ["Acesso antecipado a novidades e novas temporadas", "Materiais oficiais, clipes e códigos de criador", "Recompensas e oportunidades de parceria para criadores ativos"]
+  aff_who: "Para youtubers, streamers, criadores do TikTok e Instagram, sites e comunidades de games."
+  aff_cta: "Quero ser afiliado"
+  aff_subject: "Inscrição de afiliado"
+  beta_kicker: "Beta"
+  beta_title: "Seja um beta tester."
+  beta_text: "Jogue as novidades e novas temporadas antes de todo mundo e ajude a deixar o Football League ainda melhor."
+  beta_points: ["Teste novos modos, recursos e temporadas antes do lançamento", "Reporte bugs e envie feedback direto para a equipe", "Ajude a decidir o futuro do Football League"]
+  beta_who: "Aberto para jogadores de Android e iOS. Vagas limitadas em cada teste."
+  beta_cta: "Quero ser beta tester"
+  beta_subject: "Inscrição de beta tester"
+  beta_discord: "Entre no nosso Discord"
+  press_title: "Contato de imprensa"
+  press_text: "Para entrevistas, códigos, materiais ou parcerias, envie um e-mail."

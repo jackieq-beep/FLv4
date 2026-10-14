@@ -1,0 +1,157 @@
+# Site-wide settings. Edit these values and the site rebuilds automatically.
+
+name: Football League 2027
+short_name: FL27
+# The brand used in page titles and search results.
+brand: Football League
+# Year shown next to the logo in the official numeral style (2025, 2026 or 2027). Leave empty to hide.
+brand_year: 2027
+company: Mobile Soccer
+contact_email: partnerships@mobilesoccer.net
+legal_email: support@footballleaguegame.com
+support_email: footballleague2023@gmail.com
+
+# Google Analytics 4 "Measurement ID" (looks like G-XXXXXXXXXX). Leave empty to switch analytics off.
+# Analytics only runs after a visitor clicks "Accept all" in the cookie banner.
+ga_measurement_id: ""
+
+# Newsletter sign-up (shown above the footer on every page once "action" is filled in).
+# provider: brevo or mailchimp. action: the form address from your Brevo / Mailchimp sign-up form.
+newsletter:
+  provider: brevo
+  action: "https://27a510ee.sibforms.com/serve/MUIFAGFwBWdb6HomSmFGzuwSSg0qldMCfRlPXTGpEH70zFxKzD4qxS6MmTF-1ZVx64X1rBvyCZdSFTLml2wEYUy8m47ppL9iLFBWhn_4t_7QKCstwy0trM90rbImrw-70Yvgxq7zv8EDKXzJqf-iFTLK8xZ_7axGHboNW_uL4dxzD9ELKfDuZ_vPvSCCYzKt8Oh134UP6go6uNMFWw=="
+
+# Google Search Console "HTML tag" verification code (only the content="..." part). Leave empty if not used.
+google_site_verification: ""
+
+# Where the site lives. Leave base_path empty once a custom domain is set up.
+site_url: https://www.footballleaguegame.com
+base_path: ""
+
+stores:
+  google_play: https://play.google.com/store/apps/details?id=com.football.soccer.league
+  app_store: https://apps.apple.com/us/app/football-league-2025/id6447961802
+
+# Your Spreadshop. It is embedded on the Shop page of this site.
+spreadshop:
+  name: football-league-fan-shop
+  url: https://football-league-fan-shop.myspreadshop.com
+
+# Category tiles on the Shop page. "slug" is the Spreadshop category address.
+# "products" are product photos straight from your Spreadshop (image.spreadshirtmedia.com):
+# copy a product image address from the shop and keep everything before the "?".
+# "color" (appearanceId) picks the product color; leave it out for the default.
+shop_categories:
+  - key: men
+    slug: men
+    products:
+      - { img: "https://image.spreadshirtmedia.com/image-server/v1/products/T111A5PA4247PT17X70Y22D1058835926W20844H20844/views/1/Football%20League%20Crest.png", color: 5 }     # Men's Hoodie – red
+      - { img: "https://image.spreadshirtmedia.com/image-server/v1/products/T23A4PA3989PT17X47Y43D1058835926W21791H21791/views/1/Football%20League%20Crest.png", color: 4 }      # Men's Long Sleeve T-Shirt – navy
+  - key: women
+    slug: women
+    products:
+      - { img: "https://image.spreadshirtmedia.com/image-server/v1/products/T1007A289PA4906PT17X55Y22D1058835926W20765H20765/views/1/Football%20League%20Crest.png", color: 289 }  # Contrast Hoodie – sky blue/white
+      - { img: "https://image.spreadshirtmedia.com/image-server/v1/products/T943A1264PA3084PT17X43Y40D1058835926W20237H20237/views/1/Football%20League%20Crest.png", color: 1264 } # Roll Up Sleeve T-Shirt – burgundy
+  - key: kids
+    slug: "kids+%26+babies"
+    products:
+      - { img: "https://image.spreadshirtmedia.com/image-server/v1/products/T3284A251PA4804PT17X66Y13D1058835926W11995H11995/views/1/Football%20League%20Crest.png", color: 251 }  # Champion Youth Hoodie – heather grey
+      - { img: "https://image.spreadshirtmedia.com/image-server/v1/products/T3024A1244PA4705PT32X30Y26D1058835926W14227H14227/views/1/Football%20League%20Crest.png", color: 1244 } # Kid's 5 Star Print T-Shirt – red star
+  - key: accessories
+    slug: accessories
+    products:
+      - { img: "https://image.spreadshirtmedia.com/image-server/v1/products/T842A4PA3667PT17X38Y31D1058835926W17574H17574/views/1/Football%20League%20Crest.png", color: 4 }       # Tote Bag – navy
+      - { img: "https://image.spreadshirtmedia.com/image-server/v1/products/T4554A1PA5179PT10X10Y5D1058835926W4895H4895/views/3/Football%20League%20Crest.png" }                    # Tennis Socks – white
+
+# Background colour painted behind the product photos (no #). Matches the tiles.
+shop_photo_bg: "16161a"
+
+# Category bar above the shop (matches the categories in your Spreadshop).
+shop_nav:
+  - { key: all, slug: all }
+  - key: men
+    slug: men
+    sub:
+      - { key: tshirts, slug: men/t-shirts }
+      - { key: hoodies, slug: "men/hoodies+%26+sweatshirts" }
+      - { key: zips, slug: "men/zip+hoodies+%26+jackets" }
+      - { key: longsleeve, slug: "men/long+sleeve+shirts" }
+      - { key: polos, slug: "men/polo+shirts" }
+      - { key: tanks, slug: "men/tank+tops" }
+      - { key: sportswear, slug: men/sportswear }
+      - { key: bottoms, slug: men/bottoms }
+  - key: women
+    slug: women
+    sub:
+      - { key: tshirts, slug: women/t-shirts }
+      - { key: hoodies, slug: "women/hoodies+%26+sweatshirts" }
+      - { key: zips, slug: "women/zip+hoodies+%26+jackets" }
+      - { key: longsleeve, slug: "women/long+sleeve+shirts" }
+      - { key: polos, slug: "women/polo+shirts" }
+      - { key: tanks, slug: women/tanks }
+      - { key: sportswear, slug: women/sportswear }
+      - { key: bottoms, slug: women/bottoms }
+  - key: kids
+    slug: "kids+%26+babies"
+    sub:
+      - { key: kidshirts, slug: "kids+%26+babies/kids'+shirts" }
+      - { key: hoodies, slug: "kids+%26+babies/hoodies+%26+sweatshirts" }
+      - { key: longsleeve, slug: "kids+%26+babies/long+sleeve+shirts" }
+      - { key: baby, slug: "kids+%26+babies/baby+products" }
+      - { key: accessories, slug: "kids+%26+babies/accessories" }
+  - key: accessories
+    slug: accessories
+    sub:
+      - { key: caps, slug: "accessories/caps+%26+hats" }
+      - { key: bags, slug: "accessories/bags+%26+backpacks" }
+      - { key: aprons, slug: accessories/aprons }
+      - { key: socks, slug: accessories/socks }
+  - { key: home, slug: "home+%26+living" }
+  - { key: stickers, slug: stickers }
+
+# Leave empty so Shop buttons open the Shop page on this site.
+shop_url: ""
+
+# A YouTube link to the trailer. When set, the "See the game" button on the home page opens it.
+trailer_url: https://www.youtube.com/watch?v=Usgq1V4RpOc
+
+# Only filled-in links are shown.
+social:
+  discord: https://discord.gg/m825ft9xGn
+  instagram: https://www.instagram.com/footballleague_official
+  facebook: https://www.facebook.com/playfootballleague/
+  youtube: ""
+  x: ""
+  tiktok: https://www.tiktok.com/@footballleague.official
+
+# Languages. Each one has its text in i18n/<code>.yaml and translated news in content/news/<code>/. Set enabled: false to hide one.
+languages:
+  - { code: en, label: English, short: EN, dir: ltr, enabled: true }
+  - { code: zh-cn, label: 简体中文, short: 中文, dir: ltr, enabled: true }
+  - { code: es, label: Español, short: ES, dir: ltr, enabled: true }
+  - { code: pt, label: Português, short: PT, dir: ltr, enabled: true }
+  - { code: id, label: Bahasa Indonesia, short: ID, dir: ltr, enabled: true }
+  - { code: fr, label: Français, short: FR, dir: ltr, enabled: true }
+  - { code: ar, label: العربية, short: AR, dir: rtl, enabled: true }
+  - { code: ja, label: 日本語, short: JA, dir: ltr, enabled: true }
+
+# Hero slideshow on the homepage (first image shows first). "position" = which part of the picture to keep in view.
+hero_slides:
+  - { img: hero.png, position: "70% 30%", mobile: "64% 20%" }
+  - { img: u27-gameplay.jpg, position: "60% 50%", mobile: "55% 50%" }
+  - { img: u27-stadium.jpg, position: "50% 40%", mobile: "50% 40%" }
+
+# Pages that exist but are not in the main menu (linked from the footer).
+extra_pages:
+  - { key: media, path: media/ }
+
+# News sections, in the order the tabs appear. A post picks one with "section:" in its file.
+news_sections: [announcements, updates, events, licenses]
+
+# Main menu: page key, icon, and path.
+nav:
+  - { key: home, icon: home, path: "" }
+  - { key: game, icon: gamepad, path: game/ }
+  - { key: news, icon: news, path: news/ }
+  - { key: shop, icon: bag, path: shop/ }
+  - { key: contact, icon: mail, path: contact/ }
