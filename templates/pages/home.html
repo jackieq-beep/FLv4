@@ -5,7 +5,7 @@
 <section class="hero">
   <div class="hero-media" data-hero-slides>
     {% for sl in site.hero_slides %}
-    {{ img(sl.img, '', '100vw', 'hero-img hero-slide' ~ (' is-active' if loop.first else ''), eager=loop.first, style='--pos:' ~ sl.position ~ ';--pos-m:' ~ sl.mobile) }}
+    {{ img(sl.img, '', '100vw', 'hero-img hero-slide' ~ (' is-active' if loop.first else '') ~ (' is-contain' if sl.fit == 'contain' else ''), eager=loop.first, style='--pos:' ~ sl.position ~ ';--pos-m:' ~ sl.mobile) }}
     {% endfor %}
   </div>
   {% if site.hero_slides | length > 1 %}

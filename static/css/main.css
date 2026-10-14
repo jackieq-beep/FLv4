@@ -1248,3 +1248,13 @@ a.contact-band:hover .contact-pill .icon { transform: translateX(4px); }
   .hero-stats span { font-size: 13px; }
   .hero-rating img { height: 46px; }
 }
+
+/* Hero slide shown whole on the right (for near-square pictures); never mirrored */
+[dir="rtl"] .hero-img.is-contain { transform: none; }
+@media (min-width: 641px) {
+  .hero-img.is-contain { object-fit: contain; object-position: 100% 50%;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 40%, #000 66%); mask-image: linear-gradient(90deg, transparent 0%, transparent 40%, #000 66%); }
+  [dir="rtl"] .hero-img.is-contain { object-position: 0% 50%;
+    -webkit-mask-image: linear-gradient(-90deg, transparent 0%, transparent 40%, #000 66%); mask-image: linear-gradient(-90deg, transparent 0%, transparent 40%, #000 66%); }
+}
+[dir="rtl"] .hero-slide.is-contain.is-active { animation-name: hero-zoom; }
