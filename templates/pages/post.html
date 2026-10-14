@@ -1,7 +1,40 @@
 {% extends "base.html" %}
 {% from "partials/macros.html" import news_card, news_date %}
-{% block title %}{{ post.title }} | {{ site.brand }}{% endblock %}
-{% block description %}{{ post.summary }}{% endblock %}
+{% block title %}{{ post.seo_title }}{% endblock %}
+{% block description %}{{ post.seo_description }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_image %}<meta property="og:image" content="{{ img_url(post.image, 1200) }}">
+  <meta property="og:image:alt" content="{{ post.title }}">{% endblock %}
+{% block extra_head %}
+  {% if post.date %}<meta property="article:published_time" content="{{ post.date }}">{% endif %}
+  <meta property="article:section" content="{{ t.news.sections[post.section] }}">
+  <script type="application/ld+json">
+  {{ [{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": post.title,
+    "description": post.seo_description,
+    "image": [img_url(post.image, 1200)],
+    "datePublished": post.date | string if post.date else None,
+    "dateModified": post.date | string if post.date else None,
+    "inLanguage": lang.code,
+    "articleSection": t.news.sections[post.section],
+    "mainEntityOfPage": canonical,
+    "about": {"@type": "VideoGame", "name": site.brand},
+    "author": {"@type": "Organization", "name": site.company},
+    "publisher": {"@type": "Organization", "name": site.company,
+                  "logo": {"@type": "ImageObject", "url": site.site_url ~ site.base ~ "/img/logo-mark.png"}}
+  }, {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": site.brand, "item": site.site_url ~ url()},
+      {"@type": "ListItem", "position": 2, "name": t.news.meta_title, "item": site.site_url ~ url('news/')},
+      {"@type": "ListItem", "position": 3, "name": post.title, "item": canonical}
+    ]
+  }] | tojson }}
+  </script>
+{% endblock %}
 {% block content %}
 <article class="post">
   <header class="post-hero">

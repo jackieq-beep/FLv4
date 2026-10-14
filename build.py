@@ -74,6 +74,45 @@ def build_images():
 
 # ---------- content ----------
 
+BRAND = "Football League"
+CJK = {"ja", "zh-cn"}
+
+
+def _clip(text, limit, lang):
+    """Cut text to limit characters on a word boundary (any boundary for Chinese/Japanese)."""
+    if len(text) <= limit:
+        return text
+    cut = text[:limit - 1]
+    if lang not in CJK and " " in cut:
+        cut = cut[:cut.rfind(" ")]
+    return cut.rstrip(" ,.;:–-、，。") + "…"
+
+
+def seo_fields(meta, body, lang):
+    """Search title and description for a news post, always naming Football League."""
+    import difflib
+    title = meta.get("title", "")
+    seo_title = title if BRAND in title else f"{title} | {BRAND}"
+    summary = (meta.get("summary") or "").strip()
+    cjk = lang in CJK
+    sep = "：" if cjk else (" : " if lang == "fr" else ": ")
+    desc = summary if BRAND in summary or BRAND in title else f"{BRAND}{sep}{summary}"
+    target, limit = (60, 110) if cjk else (120, 158)
+    # Short descriptions borrow the opening sentences of the article
+    plain = re.sub(r"<[^>]+>", " ", markdown.markdown(body))
+    plain = re.sub(r"\s+", " ", plain).strip()
+    splitter = r"(?<=[。！？])" if cjk else r"(?<=[.!?])\s+(?=[^\s\d])"
+    for sentence in (x.strip() for x in re.split(splitter, plain)):
+        if len(desc) >= target:
+            break
+        if not sentence or "Instagram" in sentence or "Discord" in sentence:
+            continue
+        if difflib.SequenceMatcher(None, sentence.lower(), summary.lower()).ratio() > 0.55:
+            continue
+        desc = f"{desc}{'' if cjk else ' '}{sentence}"
+    return {"seo_title": seo_title, "seo_description": _clip(desc, limit, lang)}
+
+
 def load_news(lang):
     posts = []
     for path in sorted((ROOT / "content" / "news").glob("*.md")):
@@ -93,6 +132,7 @@ def load_news(lang):
                 body = tm.group(2)
         meta["section"] = meta.get("section") or "announcements"
         meta["html"] = Markup(markdown.markdown(body))
+        meta.update(seo_fields(meta, body, lang))
         posts.append(meta)
     # Pinned posts (with "order", lowest first) on top, then the rest newest first
     posts.sort(key=lambda p: (0, p["order"]) if "order" in p else (1, -(p["date"].toordinal()) if p.get("date") else 0))
@@ -224,7 +264,7 @@ def main():
                 canonical=f"{site['site_url']}{url(path)}", post=post, related=related[:3],
             )
             out.write_text(html, encoding="utf-8")
-            sitemap.append(f"{site['site_url']}{url(path)}")
+            sitemap.append((f"{site['site_url']}{url(path)}", post.get("date")))
 
         # Legal pages (English source in content/legal/; shared by all languages for now)
         for doc in sorted((ROOT / "content" / "legal").glob("*.md")):
@@ -255,7 +295,10 @@ def main():
 
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + "".join(f"  <url><loc>{u}</loc></url>\n" for u in sitemap)
+        + "".join(
+            f"  <url><loc>{u[0]}</loc><lastmod>{u[1].isoformat()}</lastmod></url>\n" if isinstance(u, tuple) and u[1]
+            else f"  <url><loc>{u[0] if isinstance(u, tuple) else u}</loc></url>\n"
+            for u in sitemap)
         + "</urlset>\n",
         encoding="utf-8",
     )
